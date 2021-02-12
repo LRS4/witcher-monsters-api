@@ -10,26 +10,10 @@ import java.time.LocalDate;
 import java.util.List;
 
 @SpringBootApplication
-@RestController
 public class MonstersApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MonstersApplication.class, args);
 	}
 
-	@GetMapping
-	public List<Monster> hello() {
-		return List.of(
-				new Monster(
-						"Bears",
-						"A bear",
-						"URL",
-						"Skellige",
-						"None",
-						"None",
-						LocalDate.now(),
-						1
-				)
-		);
-	}
 }
