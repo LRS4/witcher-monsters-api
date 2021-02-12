@@ -97,4 +97,11 @@ The REST API endpoints are described below.
 
     {"status":404,"reason":"Monster does not exist"}
 
+### Environment Variables
+
+    DATABASE_URL = The connection URL for the PostGreSQL database
+    DATABASE_USER = The username for the PostGreSQL database
+    DATABASE_PASSWORD = The password for the PostGreSQL database
+
+[Reference](https://stackoverflow.com/questions/35531661/using-env-variable-in-spring-boots-application-properties)
 
