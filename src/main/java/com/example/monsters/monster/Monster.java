@@ -1,8 +1,21 @@
 package com.example.monsters.monster;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 
+@Entity
+@Table
 public class Monster {
+    @Id
+    @SequenceGenerator(
+            name = "monster_sequence",
+            sequenceName = "monster_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "monster_sequence"
+    )
     private Long id;
     private String name;
     private String entry;
