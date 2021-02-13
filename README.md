@@ -102,6 +102,7 @@ The REST API endpoints are described below.
     DATABASE_URL = The connection URL for the PostGreSQL database
     DATABASE_USER = The username for the PostGreSQL database
     DATABASE_PASSWORD = The password for the PostGreSQL database
+    MONSTERS_API_ADMIN_KEY = The key for admin users. Secures the add new and update existing routes against the x-api-key auth header.
 
 [Reference](https://stackoverflow.com/questions/35531661/using-env-variable-in-spring-boots-application-properties)
 
