@@ -20,4 +20,8 @@ public class MonsterService {
         return monsterRepository.findAll();
     }
 
+    public String addNewMonster(Monster monster) {
+        System.out.println(monster);
+        return "Monster added.";
+    }
 }
