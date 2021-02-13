@@ -18,6 +18,7 @@ public class Monster {
     )
     private Long id;
     private String name;
+    @Column(length=100000)
     private String entry;
     private String imageUrl;
     private String occurrence;
