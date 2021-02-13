@@ -24,7 +24,7 @@ public class Monster {
     private String occurrence;
     private String susceptibility;
     private String loot;
-    private LocalDate dateAdded;
+    private LocalDate dateAdded = LocalDate.now();
     private Integer classCategory;
 
     public Monster() {

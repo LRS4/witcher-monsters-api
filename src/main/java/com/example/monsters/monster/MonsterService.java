@@ -5,6 +5,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class MonsterService {
@@ -29,8 +30,17 @@ public class MonsterService {
         }
 
         if (apiKey.equals(apiAdminKey)) {
-            System.out.println(monster);
-            return "Monster added.";
+            String monsterName = monster.getName();
+            Optional<Monster> monsterOptional = monsterRepository
+                    .findMonsterByName(monsterName);
+
+            if (monsterOptional.isPresent()) {
+                throw new IllegalStateException("Monster already exists.");
+            }
+
+            monsterRepository.save(monster);
+
+            return String.format("Monster (%s) added.", monsterName);
         } else {
             return "Admin API key is invalid.";
         }
