@@ -45,4 +45,26 @@ public class MonsterService {
             return "Admin API key is invalid.";
         }
     }
+
+    public String deleteMonster(Long monsterId, String apiKey) {
+        if (apiKey == null) {
+            return "Admin API key must be provided.";
+        }
+
+        if (apiKey.equals(apiAdminKey)) {
+            boolean monsterExists = monsterRepository.existsById(monsterId);
+
+            if (!monsterExists) {
+                throw new IllegalStateException(
+                        "Monster with ID " + monsterId + " does not exist.");
+            }
+
+            monsterRepository.deleteById(monsterId);
+
+            return "Monster with ID " + monsterId + " deleted.";
+        } else {
+            return "Admin API key is invalid.";
+        }
+    }
+
 }
