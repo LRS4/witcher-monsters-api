@@ -4,7 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
+import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 
 @Service
@@ -64,6 +66,68 @@ public class MonsterService {
             return "Monster with ID " + monsterId + " deleted.";
         } else {
             return "Admin API key is invalid.";
+        }
+    }
+
+    @Transactional
+    public String updateMonster(Long monsterId, Monster updatedMonster, String apiKey) {
+        if (apiKey == null) {
+            return "Admin API key must be provided.";
+        }
+
+        if (apiKey.equals(apiAdminKey)) {
+            Monster monster = monsterRepository.findById(monsterId)
+                .orElseThrow(() -> new IllegalStateException((
+                        "Monster with ID " + monsterId + " does not exist.")));
+
+            applyUpdatesToMonster(updatedMonster, monster);
+
+            return "Monster with ID " + monsterId + " updated.";
+        } else {
+            return "Admin API key is invalid.";
+        }
+    }
+
+    private void applyUpdatesToMonster(Monster updatedMonster, Monster monster) {
+        if (updatedMonster.getName() != null &&
+                updatedMonster.getName().length() > 0 &&
+                !Objects.equals(updatedMonster.getName(), monster.getName())) {
+            monster.setName(updatedMonster.getName());
+        }
+
+        if (updatedMonster.getEntry() != null &&
+                updatedMonster.getEntry().length() > 0 &&
+                !Objects.equals(updatedMonster.getEntry(), monster.getEntry())) {
+            monster.setEntry(updatedMonster.getEntry());
+        }
+
+        if (updatedMonster.getImageUrl() != null &&
+                updatedMonster.getImageUrl().length() > 0 &&
+                !Objects.equals(updatedMonster.getImageUrl(), monster.getImageUrl())) {
+            monster.setImageUrl(updatedMonster.getImageUrl());
+        }
+
+        if (updatedMonster.getOccurrence() != null &&
+                updatedMonster.getOccurrence().length() > 0 &&
+                !Objects.equals(updatedMonster.getOccurrence(), monster.getOccurrence())) {
+            monster.setOccurrence(updatedMonster.getOccurrence());
+        }
+
+        if (updatedMonster.getSusceptibility() != null &&
+                updatedMonster.getSusceptibility().length() > 0 &&
+                !Objects.equals(updatedMonster.getSusceptibility(), monster.getSusceptibility())) {
+            monster.setSusceptibility(updatedMonster.getSusceptibility());
+        }
+
+        if (updatedMonster.getLoot() != null &&
+                updatedMonster.getLoot().length() > 0 &&
+                !Objects.equals(updatedMonster.getLoot(), monster.getLoot())) {
+            monster.setLoot(updatedMonster.getLoot());
+        }
+
+        if (updatedMonster.getClassCategory() != null &&
+                !Objects.equals(updatedMonster.getClassCategory(), monster.getClassCategory())) {
+            monster.setClassCategory(updatedMonster.getClassCategory());
         }
     }
 

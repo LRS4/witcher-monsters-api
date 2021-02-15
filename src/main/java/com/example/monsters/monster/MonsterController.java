@@ -33,4 +33,11 @@ public class MonsterController {
                                 @RequestHeader(value="x-api-key", required=false) String apiKey) {
         return monsterService.deleteMonster(monsterId, apiKey);
     }
+
+    @PutMapping(path = "{monsterId}")
+    public String updateMonster(@PathVariable("monsterId") Long monsterId,
+                                @RequestBody Monster updatedMonster,
+                                @RequestHeader(value="x-api-key", required=false) String apiKey) {
+        return monsterService.updateMonster(monsterId, updatedMonster, apiKey);
+    }
 }
