@@ -13,6 +13,8 @@ visual journal:
 
 Disclaimer: This app is for learning purposes, the contents and references
 in relation to The Witcher 3: The Wild Hunt are not my own, they belong to CD Projekt Red.
+The image URLs are from [witcher.fandom.com](https://witcher.fandom.com/wiki/The_Witcher_3_bestiary)
+which is licensed under the Creative Commons Attribution-Share Alike License 3.0 (Unported) (CC-BY-SA).
 
 The entry point for the application is within the `/src/main/java/MonstersApplication.java` file.
 
@@ -97,6 +99,25 @@ for database indexing.
 
     {"status":404,"reason":"Monster with name gargoyle does not exist."}
 
+## Get all Monster categories
+
+### Request
+
+`GET /api/v1/monster/categories/all`
+
+    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/categories/all
+
+### Response
+
+    HTTP/1.1 200 OK
+    Date: Thu, 24 Feb 2011 12:36:30 GMT
+    Status: 200 OK
+    Connection: close
+    Content-Type: application/json
+    Content-Length: 3
+
+    [{"id":1,"name":"beasts","displayName":"Beasts"},{"id":2,"name":"cursedones","displayName":"Cursed Ones"},{"id":3,"name":"elementa","displayName":"Elementa"}]
+
 ## Admin Requests
 
 The following requests are for admin API key holders only.
@@ -104,21 +125,39 @@ These requests were documented using Postman.
 
 ## Create a new Monster
 
+Creating a new monster follows the convention of adding
+a monster to a category. An example of this can be seen
+below adding Wild Boars to the Beasts category.
+
 ### Request
 
-`POST /api/v1/monsters/`
+`POST /api/v1/monsters/category/beasts`
+
+`HEADERS x-api-key {API_KEY}`
+
+    {
+        {
+        "name": "wild-boars",
+        "displayName": "Wild boars",
+        "entry": "How doth the little wild boar\n Improve his shining tusks,\n And rut them 'gainst the forest floor,\n And on the trees' rough husks!\n How cheerfully he seems to grin\n How neatly spreads his claws,\n And welcomes little lasses in,\n With gently smiling jaws!\n Louis of Charolle, mathematician, author and poet\n\n These woodland beasts are as \"wild\" – untamed, nasty and aggressive – as their name indicates. To this day, many peasants in outlying Kaedweni villages believe wild boars persist on a diet of young maids, though in truth they most often slate their hunger with roots and acorns. Do not think this vegetarian diet makes them harmless, however. In fact, these animals' stout build and sharp teeth render them veritable fur-covered combat machines. Mother Nature has additionally equipped them with dual pairs of tusks - upper \"pipes\" and lower \"sabres\" - and this weaponry's sum effect is to make the beasts the terrors of the woods, a threat to all who venture or dwell there, human, humanoid and otherwise. Boars also have hard, club-like snouts, which some peasants call their \"whistles,\" though no boar has ever been heard to make such a noise. Instead, they emit a characteristic grunt, which sounds to some like the snoring of an extremely overweight man. Another peasant belief claims boars have extremely prickly natures, and, if offended, will vent their anger by knocking down fences and gobbling up potatoes. Though they sometimes live alone, boars usually appear in small groups of 3 to 5 specimens.",
+        "imageUrl": "https://static.wikia.nocookie.net/witcher/images/9/93/Tw3_journal_wild_boar.png/revision/latest/scale-to-width-down/350?cb=20170501180811",
+        "occurrence": "Gustfields,Toussaint",
+        "susceptibility": "Northern Wind,Beast oil,Igni,Yrden",
+        "loot": "Boar tusk,Boar pelt,Raw meat"
+    }
 
 ### Response
 
-    HTTP/1.1 201 Created
-    Date: Thu, 24 Feb 2011 12:36:30 GMT
-    Status: 201 Created
-    Connection: close
-    Content-Type: application/json
-    Location: /thing/1
-    Content-Length: 36
+    "Monster Wild boars added."
 
-    {"id":1,"name":"Foo","status":"new"}
+    OR
+
+    {"status":500,"reason":"Monster already exists."}
+
+    OR 
+
+    {"status":500,"reason":"Category with name madeupCategory is invalid.
+                    "/api/v1/monster/categories/all returns valid category names."}
 
 ### Environment Variables
 
