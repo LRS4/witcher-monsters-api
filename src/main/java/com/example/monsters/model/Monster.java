@@ -1,4 +1,4 @@
-package com.example.monsters.monster;
+package com.example.monsters.model;
 
 import javax.persistence.*;
 import java.time.LocalDate;

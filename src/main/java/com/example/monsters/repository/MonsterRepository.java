@@ -1,5 +1,6 @@
-package com.example.monsters.monster;
+package com.example.monsters.repository;
 
+import com.example.monsters.model.Monster;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;

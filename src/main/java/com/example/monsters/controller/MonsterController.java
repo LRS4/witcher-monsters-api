@@ -1,7 +1,8 @@
-package com.example.monsters.monster;
+package com.example.monsters.controller;
 
+import com.example.monsters.model.Monster;
+import com.example.monsters.service.MonsterService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.UnsatisfiedServletRequestParameterException;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
