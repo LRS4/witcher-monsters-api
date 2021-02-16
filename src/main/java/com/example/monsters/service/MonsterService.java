@@ -1,6 +1,5 @@
 package com.example.monsters.service;
 
-import antlr.StringUtils;
 import com.example.monsters.model.Monster;
 import com.example.monsters.repository.MonsterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +10,8 @@ import javax.transaction.Transactional;
 import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
+
+import static com.example.monsters.util.StringUtils.capitalise;
 
 @Service
 public class MonsterService {
@@ -144,9 +145,5 @@ public class MonsterService {
                 !Objects.equals(updatedMonster.getLoot(), monster.getLoot())) {
             monster.setLoot(updatedMonster.getLoot());
         }
-    }
-
-    private String capitalise(String text) {
-        return text.substring(0, 1).toUpperCase() + text.substring(1);
     }
 }
