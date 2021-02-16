@@ -14,6 +14,9 @@ public interface MonsterRepository extends JpaRepository<Monster, Long> {
     @Query("SELECT m FROM Monster m WHERE m.name = ?1")
     Optional<Monster> findMonsterByName(String name);
 
+    @Query("SELECT m FROM Monster m WHERE m.displayName = ?1")
+    Optional<Monster> findMonsterByDisplayName(String displayName);
+
     List<Monster> findByCategoryId(Long categoryId);
 
     List<Monster> findByCategoryName(String categoryName);

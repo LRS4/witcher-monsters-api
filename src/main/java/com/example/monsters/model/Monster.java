@@ -6,6 +6,9 @@ import java.time.LocalDate;
 @Entity
 @Table
 public class Monster {
+
+    //region Properties
+
     @Id
     @SequenceGenerator(
             name = "monster_sequence",
@@ -30,6 +33,10 @@ public class Monster {
 
     @ManyToOne(cascade = CascadeType.ALL)
     private Category category;
+
+    //endregion
+
+    //region Constructors
 
     public Monster() {
     }
@@ -75,6 +82,10 @@ public class Monster {
         this.dateAdded = dateAdded;
         this.category = category;
     }
+
+    //endregion
+
+    //region Accessors
 
     public Long getId() {
         return id;
@@ -171,4 +182,6 @@ public class Monster {
                 ", category=" + category +
                 '}';
     }
+
+    //endregion
 }

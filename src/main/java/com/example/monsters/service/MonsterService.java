@@ -1,6 +1,8 @@
 package com.example.monsters.service;
 
+import com.example.monsters.model.Category;
 import com.example.monsters.model.Monster;
+import com.example.monsters.repository.CategoryRepository;
 import com.example.monsters.repository.MonsterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -16,14 +18,23 @@ import static com.example.monsters.util.StringUtils.capitalise;
 @Service
 public class MonsterService {
 
+    //region Private properties
+
     @Value("${MONSTERS_API_ADMIN_KEY}")
     private String apiAdminKey;
 
     private final MonsterRepository monsterRepository;
+    private final CategoryRepository categoryRepository;
+
+    //endregion
+
+    //region Constructor
 
     @Autowired
-    public MonsterService(MonsterRepository monsterRepository) {
+    public MonsterService(MonsterRepository monsterRepository,
+                          CategoryRepository categoryRepository) {
         this.monsterRepository = monsterRepository;
+        this.categoryRepository = categoryRepository;
     }
 
     public List<Monster> getMonsters() {
@@ -34,6 +45,9 @@ public class MonsterService {
         return monsterRepository.findByCategoryName(categoryName);
     }
 
+    //endregion
+
+    //region Service methods
     public Optional<Monster> getMonsterByName(String monsterName) {
         Optional<Monster> monster = monsterRepository
                 .findMonsterByName(monsterName);
@@ -47,29 +61,27 @@ public class MonsterService {
         return monster;
     }
 
-    public String addNewMonster(Monster monster, String apiKey) {
+    public String addNewMonster(Monster monster,
+                                String categoryName,
+                                String apiKey) {
         if (apiKey == null) {
             return "Admin API key must be provided.";
         }
 
         if (apiKey.equals(apiAdminKey)) {
-            String monsterName = monster.getName();
-            Optional<Monster> monsterOptional = monsterRepository
-                    .findMonsterByName(monsterName);
-
-            if (monsterOptional.isPresent()) {
-                throw new IllegalStateException("Monster already exists.");
-            }
+            checkIfMonsterAlreadyExists(monster);
+            Category monsterCategory = getMonsterCategory(categoryName);
+            monster.setCategory(monsterCategory);
 
             monsterRepository.save(monster);
-
-            return String.format("Monster (%s) added.", monsterName);
+            return String.format("Monster (%s) added.", monster.getDisplayName());
         } else {
             return "Admin API key is invalid.";
         }
     }
 
-    public String deleteMonster(Long monsterId, String apiKey) {
+    public String deleteMonster(Long monsterId,
+                                String apiKey) {
         if (apiKey == null) {
             return "Admin API key must be provided.";
         }
@@ -91,7 +103,9 @@ public class MonsterService {
     }
 
     @Transactional
-    public String updateMonster(Long monsterId, Monster updatedMonster, String apiKey) {
+    public String updateMonster(Long monsterId,
+                                Monster updatedMonster,
+                                String apiKey) {
         if (apiKey == null) {
             return "Admin API key must be provided.";
         }
@@ -108,6 +122,14 @@ public class MonsterService {
             return "Admin API key is invalid.";
         }
     }
+
+    public List<Category> getMonsterCategories() {
+        return categoryRepository.findAll();
+    }
+
+    //endregion
+
+    //region Private methods
 
     private void applyUpdatesToMonster(Monster updatedMonster, Monster monster) {
         if (updatedMonster.getName() != null &&
@@ -146,4 +168,31 @@ public class MonsterService {
             monster.setLoot(updatedMonster.getLoot());
         }
     }
+
+    private void checkIfMonsterAlreadyExists(Monster monster) {
+        Optional<Monster> monsterByName = monsterRepository
+                .findMonsterByName(monster.getName());
+
+        Optional<Monster> monsterByDisplayName = monsterRepository
+                .findMonsterByDisplayName(monster.getDisplayName());
+
+        if (monsterByName.isPresent() || monsterByDisplayName.isPresent()) {
+            throw new IllegalStateException("Monster already exists.");
+        }
+    }
+
+    private Category getMonsterCategory(String categoryName) {
+        Category monsterCategory = categoryRepository
+                .findCategoryByName(categoryName);
+
+        if (monsterCategory == null) {
+            throw new IllegalStateException(
+                    "Category with name " + categoryName + " is invalid. " +
+                    "/api/v1/monster/categories/all returns valid category names.");
+        }
+
+        return monsterCategory;
+    }
+
+    //endregion
 }

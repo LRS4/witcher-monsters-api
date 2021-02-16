@@ -1,5 +1,6 @@
 package com.example.monsters.controller;
 
+import com.example.monsters.model.Category;
 import com.example.monsters.model.Monster;
 import com.example.monsters.service.MonsterService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +13,22 @@ import java.util.Optional;
 @RequestMapping(path = "api/v1/monster")
 public class MonsterController {
 
+    //region Private properties
+
     private final MonsterService monsterService;
+
+    //endregion
+
+    //region Constructor
 
     @Autowired
     public MonsterController(MonsterService monsterService) {
         this.monsterService = monsterService;
     }
+
+    //endregion
+
+    //region Routes
 
     @GetMapping
     public List<Monster> getMonsters() {
@@ -34,10 +45,16 @@ public class MonsterController {
         return monsterService.getMonsterByName(monsterName);
     }
 
-    @PostMapping
+    @GetMapping(path = "/categories/all")
+    public List<Category> getMonsterCategories() {
+        return monsterService.getMonsterCategories();
+    }
+
+    @PostMapping(path = "/category/{categoryName}")
     public String addNewMonster(@RequestBody Monster monster,
+                                @PathVariable("categoryName") String categoryName,
                                 @RequestHeader(value="x-api-key", required=false) String apiKey) {
-        return monsterService.addNewMonster(monster, apiKey);
+        return monsterService.addNewMonster(monster, categoryName, apiKey);
     }
 
     @DeleteMapping(path = "{monsterId}")
@@ -52,4 +69,6 @@ public class MonsterController {
                                 @RequestHeader(value="x-api-key", required=false) String apiKey) {
         return monsterService.updateMonster(monsterId, updatedMonster, apiKey);
     }
+
+    //endregion
 }
