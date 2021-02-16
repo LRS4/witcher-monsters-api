@@ -5,6 +5,9 @@ import javax.persistence.*;
 @Entity
 @Table
 public class Category {
+
+    //region Properties
+
     @Id
     @SequenceGenerator(
             name = "monster_category_sequence",
@@ -19,6 +22,10 @@ public class Category {
     private String name;
     private String displayName;
 
+    //endregion
+
+    //region Constructors
+
     public Category() {
 
     }
@@ -28,6 +35,10 @@ public class Category {
         this.name = name;
         this.displayName = displayName;
     }
+
+    //endregion
+
+    //region Accessors
 
     public Long getId() {
         return id;
@@ -61,4 +72,6 @@ public class Category {
                 ", displayName='" + displayName + '\'' +
                 '}';
     }
+
+    //endregion
 }
