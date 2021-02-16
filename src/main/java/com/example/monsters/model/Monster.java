@@ -18,6 +18,7 @@ public class Monster {
     )
     private Long id;
     private String name;
+
     @Column(length=100000)
     private String entry;
     private String imageUrl;
@@ -25,6 +26,9 @@ public class Monster {
     private String susceptibility;
     private String loot;
     private LocalDate dateAdded = LocalDate.now();
+
+    @ManyToOne(cascade = CascadeType.ALL)
+    private Category category;
 
     public Monster() {
     }
@@ -36,7 +40,8 @@ public class Monster {
                    String occurrence,
                    String susceptibility,
                    String loot,
-                   LocalDate dateAdded) {
+                   LocalDate dateAdded,
+                   Category category) {
         this.id = id;
         this.name = name;
         this.entry = entry;
@@ -45,6 +50,7 @@ public class Monster {
         this.susceptibility = susceptibility;
         this.loot = loot;
         this.dateAdded = dateAdded;
+        this.category = category;
     }
 
     public Monster(String name,
@@ -53,7 +59,8 @@ public class Monster {
                    String occurrence,
                    String susceptibility,
                    String loot,
-                   LocalDate dateAdded) {
+                   LocalDate dateAdded,
+                   Category category) {
         this.name = name;
         this.entry = entry;
         this.imageUrl = imageUrl;
@@ -61,6 +68,7 @@ public class Monster {
         this.susceptibility = susceptibility;
         this.loot = loot;
         this.dateAdded = dateAdded;
+        this.category = category;
     }
 
     public Long getId() {
@@ -127,6 +135,14 @@ public class Monster {
         this.dateAdded = dateAdded;
     }
 
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
     @Override
     public String toString() {
         return "Monster{" +
@@ -138,6 +154,7 @@ public class Monster {
                 ", susceptibility='" + susceptibility + '\'' +
                 ", loot='" + loot + '\'' +
                 ", dateAdded=" + dateAdded +
+                ", category=" + category +
                 '}';
     }
 }
