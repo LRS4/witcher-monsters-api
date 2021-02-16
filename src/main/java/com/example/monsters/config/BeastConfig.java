@@ -18,6 +18,8 @@ public class BeastConfig {
         return args -> {
             Category beasts = new Category("beasts", "Beasts");
 
+            //region Populate monsters
+
             Monster bear = new Monster(
                     "bears",
                     "Bears",
@@ -154,6 +156,8 @@ public class BeastConfig {
                     LocalDate.now(),
                     beasts
             );
+
+            //endregion
 
             repository.saveAll(
                     List.of(bear,

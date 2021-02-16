@@ -18,6 +18,8 @@ public class ElementaConfig {
         return args -> {
             Category elementa = new Category("elementa", "Elementa");
 
+            //region Populate monsters
+
             Monster iceElemental = new Monster(
                     "ice-elemental",
                     "Ice Elemental",
@@ -32,6 +34,8 @@ public class ElementaConfig {
                     LocalDate.now(),
                     elementa
             );
+
+            //endregion
 
             repository.saveAll(
                     List.of(iceElemental)

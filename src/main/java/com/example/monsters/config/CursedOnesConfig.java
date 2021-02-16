@@ -18,6 +18,8 @@ public class CursedOnesConfig {
         return args -> {
             Category cursedOnes = new Category("cursedones", "Cursed Ones");
 
+            //region Populate monsters
+
             Monster archespores = new Monster(
                     "archespores",
                     "Archespores",
@@ -115,6 +117,8 @@ public class CursedOnesConfig {
                     LocalDate.now(),
                     cursedOnes
             );
+
+            //endregion
 
             repository.saveAll(
                     List.of(archespores,

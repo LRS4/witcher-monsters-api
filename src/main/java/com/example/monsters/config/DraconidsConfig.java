@@ -17,6 +17,8 @@ public class DraconidsConfig {
         return args -> {
             Category draconids = new Category("draconids", "Draconids");
 
+            //region Populate monsters
+
             Monster basilisks = new Monster(
                     "basilisks",
                     "Basilisks",
@@ -113,6 +115,8 @@ public class DraconidsConfig {
                     LocalDate.now(),
                     draconids
             );
+
+            //endregion
 
             repository.saveAll(
                     List.of(basilisks,
