@@ -25,7 +25,6 @@ public class Monster {
     private String susceptibility;
     private String loot;
     private LocalDate dateAdded = LocalDate.now();
-    private Integer classCategory;
 
     public Monster() {
     }
@@ -37,8 +36,7 @@ public class Monster {
                    String occurrence,
                    String susceptibility,
                    String loot,
-                   LocalDate dateAdded,
-                   Integer classCategory) {
+                   LocalDate dateAdded) {
         this.id = id;
         this.name = name;
         this.entry = entry;
@@ -47,7 +45,6 @@ public class Monster {
         this.susceptibility = susceptibility;
         this.loot = loot;
         this.dateAdded = dateAdded;
-        this.classCategory = classCategory;
     }
 
     public Monster(String name,
@@ -56,8 +53,7 @@ public class Monster {
                    String occurrence,
                    String susceptibility,
                    String loot,
-                   LocalDate dateAdded,
-                   Integer classCategory) {
+                   LocalDate dateAdded) {
         this.name = name;
         this.entry = entry;
         this.imageUrl = imageUrl;
@@ -65,7 +61,6 @@ public class Monster {
         this.susceptibility = susceptibility;
         this.loot = loot;
         this.dateAdded = dateAdded;
-        this.classCategory = classCategory;
     }
 
     public Long getId() {
@@ -132,14 +127,6 @@ public class Monster {
         this.dateAdded = dateAdded;
     }
 
-    public Integer getClassCategory() {
-        return classCategory;
-    }
-
-    public void setClassCategory(Integer classCategory) {
-        this.classCategory = classCategory;
-    }
-
     @Override
     public String toString() {
         return "Monster{" +
@@ -151,7 +138,6 @@ public class Monster {
                 ", susceptibility='" + susceptibility + '\'' +
                 ", loot='" + loot + '\'' +
                 ", dateAdded=" + dateAdded +
-                ", classCategory=" + classCategory +
                 '}';
     }
 }

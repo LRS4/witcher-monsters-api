@@ -25,8 +25,7 @@ public class MonsterConfig {
                     "Velen,Skellige,White Orchard,Toussaint",
                     "Beast oil,Quen",
                     "Bear fat,Bear hide,Raw meat,White bear hide",
-                    LocalDate.now(),
-                    1
+                    LocalDate.now()
             );
 
             Monster panther = new Monster(
@@ -46,8 +45,7 @@ public class MonsterConfig {
                     "Toussaint",
                     "Beast oil",
                     "Fur scrap,Cured leather,Raw meat",
-                    LocalDate.now(),
-                    1
+                    LocalDate.now()
             );
 
             repository.saveAll(

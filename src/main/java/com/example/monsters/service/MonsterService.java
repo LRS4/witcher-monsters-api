@@ -126,11 +126,6 @@ public class MonsterService {
                 !Objects.equals(updatedMonster.getLoot(), monster.getLoot())) {
             monster.setLoot(updatedMonster.getLoot());
         }
-
-        if (updatedMonster.getClassCategory() != null &&
-                !Objects.equals(updatedMonster.getClassCategory(), monster.getClassCategory())) {
-            monster.setClassCategory(updatedMonster.getClassCategory());
-        }
     }
 
 }
