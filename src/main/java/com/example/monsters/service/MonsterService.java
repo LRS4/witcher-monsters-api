@@ -31,12 +31,12 @@ public class MonsterService {
     }
 
     public List<Monster> getMonstersByCategoryName(String categoryName) {
-        return monsterRepository.findByCategoryName(capitalise(categoryName));
+        return monsterRepository.findByCategoryName(categoryName);
     }
 
     public Optional<Monster> getMonsterByName(String monsterName) {
         Optional<Monster> monster = monsterRepository
-                .findMonsterByName(capitalise(monsterName));
+                .findMonsterByName(monsterName);
 
         if (monster.isEmpty()) {
             throw new IllegalStateException("Monster with name " +

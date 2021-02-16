@@ -18,6 +18,7 @@ public class Monster {
     )
     private Long id;
     private String name;
+    private String displayName;
 
     @Column(length=100000)
     private String entry;
@@ -35,6 +36,7 @@ public class Monster {
 
     public Monster(Long id,
                    String name,
+                   String displayName,
                    String entry,
                    String imageUrl,
                    String occurrence,
@@ -44,6 +46,7 @@ public class Monster {
                    Category category) {
         this.id = id;
         this.name = name;
+        this.displayName = displayName;
         this.entry = entry;
         this.imageUrl = imageUrl;
         this.occurrence = occurrence;
@@ -54,6 +57,7 @@ public class Monster {
     }
 
     public Monster(String name,
+                   String displayName,
                    String entry,
                    String imageUrl,
                    String occurrence,
@@ -62,6 +66,7 @@ public class Monster {
                    LocalDate dateAdded,
                    Category category) {
         this.name = name;
+        this.displayName = displayName;
         this.entry = entry;
         this.imageUrl = imageUrl;
         this.occurrence = occurrence;
@@ -85,6 +90,14 @@ public class Monster {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
     }
 
     public String getEntry() {
@@ -148,6 +161,7 @@ public class Monster {
         return "Monster{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", displayName='" + displayName + '\'' +
                 ", entry='" + entry + '\'' +
                 ", imageUrl='" + imageUrl + '\'' +
                 ", occurrence='" + occurrence + '\'' +

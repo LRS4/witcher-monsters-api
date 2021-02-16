@@ -18,7 +18,8 @@ The entry point for the application is within the `/src/main/java/MonstersApplic
 
 # REST API - In progress
 
-The REST API endpoints are described below.
+The REST API endpoints are described below. Spaces are hyphenated
+for database indexing.
 
 ## Get list of Monsters
 
@@ -64,7 +65,7 @@ The REST API endpoints are described below.
 
 `GET /api/v1/monster/{name}`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/panthers
+    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/ice-elemental
 
 ### Response
 
@@ -75,7 +76,7 @@ The REST API endpoints are described below.
     Content-Type: application/json
     Content-Length: 1
 
-    [{"id":2,"name":"Panthers","entry":"Pussy cat, pussy cat, where have you been?\nI've been to Cintra to look at the queen\nPussy cat, pussy cat, what did you there?\nRun, fool, that's not a cat but a panther!\n– rare variant of a traditional folk rhyme\n\nPanthers are dangerous predators found in forests and other woodlands. They are quick, agile and, like all cats, diabolically cunning. In many less-than-thoroughly-urbanized areas, folk still believe panthers are the stranded souls of those who die in their sleep. Superstition thus holds anyone perishing in this way should be dragged to the nearest woods and left there without a burial. The panther-spirit of the deceased may then devour its own body, thereby passing on to the nether realms.\nThis belief must be eradicated by any means, for it leads to epidemics of cholera and other contagious diseases born of rotting corpses.\nBesides, it is patently ridiculous, given panthers are not necrophages and will not consume carrion of any sort. They prefer more spry and lively prey, such as deer or even humans, provided they are not ill and do not stink too badly.\nPanthers (and their tawny-coated cousins, mountain lions) are incredibly swift and able to sneak up on prey undetected to gain the advantage of surprise.\nAs soon as they enter open terrain, they leap to attack with astonishing speed, mauling their prey with their sharp claws, long teeth and the sheer force of their momentum.\nPanthers are known to retreat mid-fight, yet do not let yourself be fooled into a false sense of security. This is but a ruse to allow them to attack again, by surprise. Never drop your guard until you see the animal drop dead.\n\nPanthers are vulnerable to the effects of all the Signs, as well as bombs and oils.","imageUrl":"https://static.wikia.nocookie.net/witcher/images/d/da/Tw3_journal_panther.png/revision/latest/scale-to-width-down/350?cb=20160531173331","occurrence":"Toussaint","susceptibility":"Beast oil","loot":"Fur scrap,Cured leather,Raw meat","dateAdded":"2021-02-16","category":{"id":2,"name":"Vampires"}}]
+    [{"id":5,"name":"ice-elemental","displayName":"Ice Elemental","entry":"I thought to myself - what's a hunk of ice doing in the middle of some lab? And then that hunk of ice got up and broke my legs.\n– Yannick Lovt, burglar\nAn ice elemental is a mass of frozen water animated by magic. Deprived of consciousness or independent will, this elemental is boundlessly obedient to the orders of the mage who created it. Those orders usually contain but one syllable: kill.\nIce elementals have no qualms about carrying out this order nor any particular difficulty in doing so. Gifted with incredible strength, they are completely invulnerable to poison and fire, deprived of sensitive organs, hard as permafrost and all in all incredibly difficult opponents. A witcher's only chance at tipping the scales towards victory is to toss a dimeritium bomb – shrapnel made of this metal interferes with the workings of the spell that gives this creature life. Beyond that remains only prayer.","imageUrl":"https://static.wikia.nocookie.net/witcher/images/c/c6/Tw3_journal_iceelemental.png/revision/latest/scale-to-width-down/350?cb=20160409141539","occurrence":"Skellige","susceptibility":"Dimeritium bomb,Elementa oil","loot":"Elemental essence","dateAdded":"2021-02-16","category":{"id":3,"name":"elementa","displayName":"Elementa"}}]
 
 ## Get a non-existent Monster
 

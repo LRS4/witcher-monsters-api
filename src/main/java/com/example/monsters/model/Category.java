@@ -17,13 +17,16 @@ public class Category {
     )
     private Long id;
     private String name;
+    private String displayName;
 
     public Category() {
 
     }
 
-    public Category(String name) {
+    public Category(String name,
+                    String displayName) {
         this.name = name;
+        this.displayName = displayName;
     }
 
     public Long getId() {
@@ -42,11 +45,20 @@ public class Category {
         this.name = name;
     }
 
+    public String getDisplayName() {
+        return displayName;
+    }
+
+    public void setDisplayName(String displayName) {
+        this.displayName = displayName;
+    }
+
     @Override
     public String toString() {
         return "Category{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", displayName='" + displayName + '\'' +
                 '}';
     }
 }

@@ -1,7 +1,7 @@
 package com.example.monsters.config;
 
-import com.example.monsters.model.Monster;
 import com.example.monsters.model.Category;
+import com.example.monsters.model.Monster;
 import com.example.monsters.repository.MonsterRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -11,30 +11,33 @@ import java.time.LocalDate;
 import java.util.List;
 
 @Configuration
-public class MonsterConfig {
+public class CursedOnesConfig {
 
     @Bean
-    CommandLineRunner commandLineRunner(MonsterRepository repository) {
+    CommandLineRunner cursedOnesCommandLineRunner(MonsterRepository repository) {
         return args -> {
-            Category beasts = new Category("Beasts");
-            Category vampires = new Category("Vampires");
+            Category cursedOnes = new Category("cursedones", "Cursed Ones");
 
-            Monster bear = new Monster(
-                    "Bears",
-                    "Know that ditty about the bear \"climbing the mountain, to see what he could see?\" Biggest load of rubbish I've ever heard. When a bear climbs a mountain, it's not to see. It's to hunt. To kill.\n" +
-                            "– Jahne Oldak, royal huntsman\n\n" +
-                            "Bears are omnivores – meaning men find a place in their diet beside berries, roots and salmon. When they snack on humans, they most frequently partake of the meat of travelers unwittingly trespassing on their territory, or else that of hunters for whom besting such a creature is a lifelong ambition.\n" +
-                            "There are several subspecies of bears – black bears, polar bears and cave bears – which differ from one another in coloring as well as in size and strength. All share one trait in common, however: a near-unmatched ability to kill.",
-                    "https://static.wikia.nocookie.net/witcher/images/0/07/Tw3_journal_bear.png/revision/latest?cb=20160304204324",
-                    "Velen,Skellige,White Orchard,Toussaint",
-                    "Beast oil,Quen",
-                    "Bear fat,Bear hide,Raw meat,White bear hide",
+            Monster archespores = new Monster(
+                    "archespores",
+                    "Archespores",
+                    "Looks like a flower to me. A hideous, disgusting flower.\n" +
+                            "– Blasco Tennerbe, last words\n" +
+                            "Archespores look like gigantic, aesthetically unpleasing flowers with some of the traits of exceptionally cruel and bloodthirsty sundews. They are, however, far more dangerous that even the most colossal sundew. Their peculiar appearance makes them practically impossible to discern amidsts other plants. By the time one draws close enough to realize what they are, it is often too late to flee.\n" +
+                            "According to popular belief, archespores are cursed plants grown in soil fertilized by the blood of the dying. They are most often found in places which in the past saw pogroms, bloody rituals or cruel murders Four types of archespore have been catalogued to date, differing from one another in terms of coloring: brown (the least dangerous), green and purple (the most dangerous). The final variant, said to have been cultivated by mages from Ban Ard, is the yellow archespore, whose strength is similar to that of its green-colored-cousins.\n" +
+                            "Regardless of color, all archespores fight using similar methods: attacking with powerful, jaw-like leaves. If their victim is out of reach, they can also spray caustic acid which if it makes any contact whatsoever with the skin, can provoke a reaction similar to that caused by severe poisoning.\n" +
+                            "Like other plants, all archespores are extremely vulnerable to fire, which is one of the most effective methods of fighting them. Silver also works well, as does any sort of shock wave. Archespores do not like strong vibrations, which cause them to flee underground at once. Due to the nature of their origins, oil damaging to cursed beings can also be useful against them.",
+                    "https://static.wikia.nocookie.net/witcher/images/c/cd/Tw3_journal_echinops.png/revision/latest/scale-to-width-down/654?cb=20160605082337",
+                    "Toussaint",
+                    "Cursed oil,Aard,Igni",
+                    "Archespore juice,Archespore tendril,Green mutagen,Monster spore,Venom extract",
                     LocalDate.now(),
-                    beasts
+                    cursedOnes
             );
 
-            Monster panther = new Monster(
-                    "Panthers",
+            Monster berserkers = new Monster(
+                    "berserkers",
+                    "Berserkers",
                     "Pussy cat, pussy cat, where have you been?\nI've been to Cintra to look at the queen\n" +
                             "Pussy cat, pussy cat, what did you there?\n" +
                             "Run, fool, that's not a cat but a panther!\n" +
@@ -51,12 +54,12 @@ public class MonsterConfig {
                     "Beast oil",
                     "Fur scrap,Cured leather,Raw meat",
                     LocalDate.now(),
-                    vampires
+                    cursedOnes
             );
 
             repository.saveAll(
-                    List.of(bear,
-                            panther)
+                    List.of(archespores,
+                            berserkers)
             );
         };
     }
