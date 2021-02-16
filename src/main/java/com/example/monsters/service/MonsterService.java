@@ -104,6 +104,7 @@ public class MonsterService {
 
     @Transactional
     public String updateMonster(Long monsterId,
+                                Long categoryId,
                                 Monster updatedMonster,
                                 String apiKey) {
         if (apiKey == null) {
@@ -115,7 +116,7 @@ public class MonsterService {
                 .orElseThrow(() -> new IllegalStateException((
                         "Monster with ID " + monsterId + " does not exist.")));
 
-            applyUpdatesToMonster(updatedMonster, monster);
+            applyUpdatesToMonster(updatedMonster, monster, categoryId);
 
             return "Monster with ID " + monsterId + " updated.";
         } else {
@@ -131,7 +132,19 @@ public class MonsterService {
 
     //region Private methods
 
-    private void applyUpdatesToMonster(Monster updatedMonster, Monster monster) {
+    private void applyUpdatesToMonster(Monster updatedMonster,
+                                       Monster monster,
+                                       Long categoryId) {
+        if (categoryId != null) {
+            Category category = categoryRepository.findById(categoryId)
+                    .orElseThrow(() -> new IllegalStateException((
+                            "Category with ID " + categoryId + " does not exist.")));
+
+            if (!Objects.equals(monster.getCategory(), category)) {
+                monster.setCategory(category);
+            }
+        }
+
         if (updatedMonster.getName() != null &&
                 updatedMonster.getName().length() > 0 &&
                 !Objects.equals(updatedMonster.getName(), monster.getName())) {

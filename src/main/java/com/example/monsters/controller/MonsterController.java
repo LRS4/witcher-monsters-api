@@ -63,11 +63,12 @@ public class MonsterController {
         return monsterService.deleteMonster(monsterId, apiKey);
     }
 
-    @PutMapping(path = "{monsterId}")
+    @PutMapping(path = "{monsterId}/{categoryId}")
     public String updateMonster(@PathVariable("monsterId") Long monsterId,
+                                @PathVariable(value = "categoryId", required = false) Long categoryId,
                                 @RequestBody Monster updatedMonster,
                                 @RequestHeader(value="x-api-key", required=false) String apiKey) {
-        return monsterService.updateMonster(monsterId, updatedMonster, apiKey);
+        return monsterService.updateMonster(monsterId, categoryId, updatedMonster, apiKey);
     }
 
     //endregion

@@ -46,7 +46,7 @@ for database indexing.
 
 ### Request
 
-`GET /api/v1/monster/category/{name}`
+`GET /api/v1/monster/category/vampires`
 
     curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/category/vampires
 
@@ -65,7 +65,7 @@ for database indexing.
 
 ### Request
 
-`GET /api/v1/monster/{name}`
+`GET /api/v1/monster/ice-elemental`
 
     curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/ice-elemental
 
@@ -84,7 +84,7 @@ for database indexing.
 
 ### Request
 
-`GET /api/v1/monster/{name}`
+`GET /api/v1/monster/gargoyle`
 
     curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/gargoyle
 
@@ -133,7 +133,7 @@ below adding Wild Boars to the Beasts category.
 
 `POST /api/v1/monsters/category/beasts`
 
-`HEADERS x-api-key {API_KEY}`
+`HEADERS x-api-key {ADMIN_API_KEY}`
 
     {
         {
@@ -159,6 +159,52 @@ below adding Wild Boars to the Beasts category.
     {"status":500,"reason":"Category with name madeupCategory is invalid.
                     "/api/v1/monster/categories/all returns valid category names."}
 
+    OR
+
+    {"status":500,"reason":"Admin API key is invalid./must be provided"}
+
+## Update existing monster
+
+Updating an existing monster follows the convention of
+providing a monster ID and a category ID alongside the
+monster object. A field which differs from the
+currently assigned value will be changed including
+the category. 
+
+### Request
+
+`PUT /api/v1/monsters/5/9`
+
+`HEADERS x-api-key {ADMIN_API_KEY}`
+
+    {
+        {
+        "name": "wild-boars",
+        "displayName": "Wild boars",
+        "entry": "How doth the little wild boar\n Improve his shining tusks,\n And rut them 'gainst the forest floor,\n And on the trees' rough husks!\n How cheerfully he seems to grin\n How neatly spreads his claws,\n And welcomes little lasses in,\n With gently smiling jaws!\n Louis of Charolle, mathematician, author and poet\n\n These woodland beasts are as \"wild\" – untamed, nasty and aggressive – as their name indicates. To this day, many peasants in outlying Kaedweni villages believe wild boars persist on a diet of young maids, though in truth they most often slate their hunger with roots and acorns. Do not think this vegetarian diet makes them harmless, however. In fact, these animals' stout build and sharp teeth render them veritable fur-covered combat machines. Mother Nature has additionally equipped them with dual pairs of tusks - upper \"pipes\" and lower \"sabres\" - and this weaponry's sum effect is to make the beasts the terrors of the woods, a threat to all who venture or dwell there, human, humanoid and otherwise. Boars also have hard, club-like snouts, which some peasants call their \"whistles,\" though no boar has ever been heard to make such a noise. Instead, they emit a characteristic grunt, which sounds to some like the snoring of an extremely overweight man. Another peasant belief claims boars have extremely prickly natures, and, if offended, will vent their anger by knocking down fences and gobbling up potatoes. Though they sometimes live alone, boars usually appear in small groups of 3 to 5 specimens.",
+        "imageUrl": "https://static.wikia.nocookie.net/witcher/images/9/93/Tw3_journal_wild_boar.png/revision/latest/scale-to-width-down/350?cb=20170501180811",
+        "occurrence": "Gustfields,Toussaint",
+        "susceptibility": "Northern Wind,Beast oil,Igni,Yrden",
+        "loot": "Boar tusk,Boar pelt,Raw meat"
+    }
+
+### Response
+
+    "Monster with ID 5 updated."
+
+    OR
+
+    {"status":500,"reason":"Monster with ID 5 does not exist.."}
+
+    OR 
+
+    {"status":500,"reason":"Category with ID 9 is invalid.
+                    "/api/v1/monster/categories/all returns valid category IDs."}
+
+    OR
+
+    {"status":500,"reason":"Admin API key is invalid./must be provided"}
+
 ### Environment Variables
 
     DATABASE_URL = The connection URL for the PostGreSQL database
@@ -173,3 +219,4 @@ below adding Wild Boars to the Beasts category.
 * [Spring Boot Tutorial](https://www.youtube.com/watch?v=9SGDpanrc8U)
 * [Spring Data JPA Many to One](https://www.youtube.com/watch?v=_Jnu_jHfQbM)
 * [Handle Hibernate transient instance](https://stackoverflow.com/questions/2302802/how-to-fix-the-hibernate-object-references-an-unsaved-transient-instance-save)
+* [Hikari Database Connection Settings](https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby)
