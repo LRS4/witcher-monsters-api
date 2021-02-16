@@ -1,6 +1,7 @@
 package com.example.monsters.config;
 
 import com.example.monsters.model.Monster;
+import com.example.monsters.model.Category;
 import com.example.monsters.repository.MonsterRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -15,6 +16,9 @@ public class MonsterConfig {
     @Bean
     CommandLineRunner commandLineRunner(MonsterRepository repository) {
         return args -> {
+            Category beasts = new Category("Beasts");
+            Category vampires = new Category("Vampires");
+
             Monster bear = new Monster(
                     "Bears",
                     "Know that ditty about the bear \"climbing the mountain, to see what he could see?\" Biggest load of rubbish I've ever heard. When a bear climbs a mountain, it's not to see. It's to hunt. To kill.\n" +
@@ -25,7 +29,8 @@ public class MonsterConfig {
                     "Velen,Skellige,White Orchard,Toussaint",
                     "Beast oil,Quen",
                     "Bear fat,Bear hide,Raw meat,White bear hide",
-                    LocalDate.now()
+                    LocalDate.now(),
+                    beasts
             );
 
             Monster panther = new Monster(
@@ -45,7 +50,8 @@ public class MonsterConfig {
                     "Toussaint",
                     "Beast oil",
                     "Fur scrap,Cured leather,Raw meat",
-                    LocalDate.now()
+                    LocalDate.now(),
+                    vampires
             );
 
             repository.saveAll(

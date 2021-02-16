@@ -1,5 +1,6 @@
 package com.example.monsters.service;
 
+import antlr.StringUtils;
 import com.example.monsters.model.Monster;
 import com.example.monsters.repository.MonsterRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,23 @@ public class MonsterService {
 
     public List<Monster> getMonsters() {
         return monsterRepository.findAll();
+    }
+
+    public List<Monster> getMonstersByCategoryName(String categoryName) {
+        return monsterRepository.findByCategoryName(capitalise(categoryName));
+    }
+
+    public Optional<Monster> getMonsterByName(String monsterName) {
+        Optional<Monster> monster = monsterRepository
+                .findMonsterByName(capitalise(monsterName));
+
+        if (monster.isEmpty()) {
+            throw new IllegalStateException("Monster with name " +
+                    monsterName +
+                    " does not exist.");
+        }
+
+        return monster;
     }
 
     public String addNewMonster(Monster monster, String apiKey) {
@@ -128,4 +146,7 @@ public class MonsterService {
         }
     }
 
+    private String capitalise(String text) {
+        return text.substring(0, 1).toUpperCase() + text.substring(1);
+    }
 }

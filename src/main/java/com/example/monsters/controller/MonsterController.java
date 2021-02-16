@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "api/v1/monster")
@@ -21,6 +22,16 @@ public class MonsterController {
     @GetMapping
     public List<Monster> getMonsters() {
         return monsterService.getMonsters();
+    }
+
+    @GetMapping(path = "/category/{categoryName}")
+    public List<Monster> getMonstersByCategory(@PathVariable("categoryName") String categoryName) {
+        return monsterService.getMonstersByCategoryName(categoryName);
+    }
+
+    @GetMapping(path = "/{monsterName}")
+    public Optional<Monster> getMonster(@PathVariable("monsterName") String monsterName) {
+        return monsterService.getMonsterByName(monsterName);
     }
 
     @PostMapping
