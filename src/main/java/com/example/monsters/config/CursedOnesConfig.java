@@ -57,9 +57,72 @@ public class CursedOnesConfig {
                     cursedOnes
             );
 
+            Monster botchlings = new Monster(
+                    "botchlings",
+                    "Botchlings",
+                    "Saying a botchling's ugly is like saying shit's not particularly tasty: can't say it's a lie, but it doesn't exactly convey the whole truth, either.\n" +
+                            "– Lambert, witcher of the Wolf School\n" +
+                            "Botchlings are perhaps the most repulsive creatures a witcher will ever have the displeasure of meeting. Born of dead, unwanted babies discarded without a proper burial, their appearance is that of a partially-decayed fetus, their unformed flesh twisted with hate, fear and malice. These hideous creatures feed on the blood of pregnant women, driven by a mad hunger that most often leads to their victim's death.\n" +
+                            "A botchling will emerge from its lair at night to lurk by the bedside of an expectant mother, draining her strength and that of her unborn progeny as she sleeps. A woman thus beleaguered first suffers from troubling dreams, then fever, delirium and a general weakening of the flesh. After a few such nights she is enfeebled and unable to defend herself - it is then the botchling attacks directly, sinking its long, sharp fangs into her body and drinking her blood until mother and fetus perish together.\n" +
+                            "A botchling stands around a foot and a half in height, but, when threatened and if gorged with blood, it can change form. At such times it grows into a deformed man, hunched over and striding, ape-like, on its forearms. Stronger and fiercer after this alteration, it hurls itself into direct, physical combat, gnashing at its opponent or attacking him with sharp claws.\n" +
+                            "A botchling's curse can be lifted by transforming it into a lubberkin - a guardian spirit of the hearth that watches over the family it never knew in the house it never could call home.",
+                    "https://static.wikia.nocookie.net/witcher/images/4/4c/Tw3_journal_botchling.png/revision/latest/scale-to-width-down/350?cb=20170602062312",
+                    "Crow's Perch",
+                    "Cursed oil,Axii",
+                    "Lesser red mutagen,Monster ear,Monster blood,Monster bone,Necrophage hide,Rotting flesh,Monster brain",
+                    LocalDate.now(),
+                    cursedOnes
+            );
+
+            Monster toadPrince = new Monster(
+                    "the-toad-prince",
+                    "The Toad Prince",
+                    "The girl walked up to the edge of the pond. There, squatting amidst the fragrant lilies and broad lily-pads, she saw a most unusual sight: a small green frog with a golden crown perched on its warty head. Charmed by this curious little creature, the girl picked it up and gave it a kiss. Immediately the little frog transformed into a handsome prince. Overcome with gratitude, he asked the girl to be his wife.\n" +
+                            "– folk tale, author unknown\n" +
+                            "Timeless tales always carry within them a grain of truth. The legend of the frog prince is no exception, or at least that's what the folk of Oxenfurt wished to believe when they found out a monstrous toad lurked in their city sewers. The women who hunted it in search of romance and a better life, however, found their tales had a most unhappy ending. The creature they encountered was no small, sweet frog but a bloodthirsty beast, who not only did not let them in for a kiss, but instead greedily devoured them and anything else that strayed into its slime-covered lair.",
+                    "https://static.wikia.nocookie.net/witcher/images/f/ff/Tw3_journal_the_toad_prince.png/revision/latest/scale-to-width-down/350?cb=20151101193448",
+                    "Oxenfurt sewers",
+                    "Northern Wind,Golden Oriole,Cursed oil,Yrden sign",
+                    "None",
+                    LocalDate.now(),
+                    cursedOnes
+            );
+
+            Monster ulfhedinn = new Monster(
+                    "ulfhedinn",
+                    "Ulfhedinn",
+                    "",
+                    "https://static.wikia.nocookie.net/witcher/images/0/06/Tw3_journal_ulfhedinn.png/revision/latest/scale-to-width-down/350?cb=20160408154719",
+                    "Skellige",
+                    "Moon Dust,Devil's Puffball,Cursed oil,Igni",
+                    "Werewolf hide,Werewolf mutagen,Werewolf saliva,Monster essence",
+                    LocalDate.now(),
+                    cursedOnes
+            );
+
+            Monster werewolves = new Monster(
+                    "werewolves",
+                    "Werewolves",
+                    "Wolves aren't as bad as they're made out to be. Werewolves, though – they're every bit as bad and worse.\n" +
+                            "– Elsa Vilge, archer\n" +
+                            "Werewolves are creatures with both men and wolves inside them. When in beastly form, they take the worst traits of each: the wolf's drive to kill and hunger for raw flesh and the man's cruel and calculating intelligence. A werewolf's condition comes about through a curse, and the transformations happen outside his conscious control. When he reverts to human form, he has no memory of his deeds – otherwise he would surely go mad and take his own life.\n" +
+                            "Werewolves are active at night, particularly when the moon is full. Though they hunt alone, when threatened they will summon wolves to aid them. Werewolves rarely feel the need to flee, for few adversaries put up much of a fight against them. They strike as swiftly as lightning with claws sharp as razors and regenerate any damage received in mere moments. When fighting werewolves a witcher should wield a blade covered in oil harmful to the cursed and have a large supply of Devil's Puffballs handy.\n" +
+                            "A werewolf's curse can at times be lifted, yet there is no universal, surefire method for doing this. A witcher seeking to undertake such a task must there equip himself with a great deal of patience – and sturdy armor.",
+                    "https://static.wikia.nocookie.net/witcher/images/b/ba/Tw3_journal_werewolf.png/revision/latest/scale-to-width-down/350?cb=20160408161038",
+                    "Velen,Skellige",
+                    "Moon Dust,Devil's Puffball,Cursed oil,Igni",
+                    "Werewolf hide,Werewolf mutagen,Werewolf saliva",
+                    LocalDate.now(),
+                    cursedOnes
+            );
+
             repository.saveAll(
                     List.of(archespores,
-                            berserkers)
+                            berserkers,
+                            botchlings,
+                            toadPrince,
+                            ulfhedinn,
+                            werewolves)
             );
         };
     }
