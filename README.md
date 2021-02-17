@@ -2,10 +2,10 @@
 
 A minimal application to learn the fundamentals of Spring Boot with Java.
 The REST API serves data on creatures found in The Witcher 3: Wild Hunt. 
-I plan on deploying this backend application to AWS Elastic Beanstalk, and will update
-this documentation once it is deployed.
+This is bundled with an Angular application served from Spring Boot's 
+resources/static folder which will act as the UI.
 
-I hope this backend service will help anyone who wants to build a
+I hope the API will help anyone who wants to build a
 frontend application of viewing journal entries, similar to the in-game
 visual journal:
 
@@ -18,7 +18,7 @@ which is licensed under the Creative Commons Attribution-Share Alike License 3.0
 
 The entry point for the application is within the `/src/main/java/MonstersApplication.java` file.
 
-# REST API - In progress
+# REST API
 
 The REST API endpoints are described below. Spaces are hyphenated
 for database indexing.
@@ -205,6 +205,26 @@ the category.
 
     {"status":500,"reason":"Admin API key is invalid./must be provided"}
 
+## Delete existing monster
+
+### Request
+
+`PUT /api/v1/monsters/5`
+
+`HEADERS x-api-key {ADMIN_API_KEY}`
+
+### Response
+
+    "Monster with ID 5 deleted."
+
+    OR
+
+    {"status":500,"reason":"Monster with ID 5 does not exist."}
+
+    OR
+
+    {"status":500,"reason":"Admin API key is invalid./must be provided"}
+
 ### Environment Variables
 
     DATABASE_URL = The connection URL for the PostGreSQL database
@@ -220,3 +240,5 @@ the category.
 * [Spring Data JPA Many to One](https://www.youtube.com/watch?v=_Jnu_jHfQbM)
 * [Handle Hibernate transient instance](https://stackoverflow.com/questions/2302802/how-to-fix-the-hibernate-object-references-an-unsaved-transient-instance-save)
 * [Hikari Database Connection Settings](https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby)
+* [Invalidate cache and reload in IntelliJ](https://stackoverflow.com/questions/52091449/class-not-found-in-module-warning-when-try-to-create-run-debug-configuration-in)
+* [Angular and Spring Boot Integration](https://www.youtube.com/watch?v=JJoBUdMJf1I)
