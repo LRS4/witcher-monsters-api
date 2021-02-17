@@ -84,9 +84,9 @@ for database indexing.
 
 ### Request
 
-`GET /api/v1/monster/gargoyle`
+`GET /api/v1/monster/non-existent-monster`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/gargoyle
+    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/non-existent-monster
 
 ### Response
 
@@ -97,7 +97,7 @@ for database indexing.
     Content-Type: application/json
     Content-Length: 35
 
-    {"status":404,"reason":"Monster with name gargoyle does not exist."}
+    {"status":404,"reason":"Monster with name non-existent-monster does not exist."}
 
 ## Get all Monster categories
 
