@@ -29,7 +29,7 @@ public class CursedOnesConfig {
                             "According to popular belief, archespores are cursed plants grown in soil fertilized by the blood of the dying. They are most often found in places which in the past saw pogroms, bloody rituals or cruel murders Four types of archespore have been catalogued to date, differing from one another in terms of coloring: brown (the least dangerous), green and purple (the most dangerous). The final variant, said to have been cultivated by mages from Ban Ard, is the yellow archespore, whose strength is similar to that of its green-colored-cousins.\n" +
                             "Regardless of color, all archespores fight using similar methods: attacking with powerful, jaw-like leaves. If their victim is out of reach, they can also spray caustic acid which if it makes any contact whatsoever with the skin, can provoke a reaction similar to that caused by severe poisoning.\n" +
                             "Like other plants, all archespores are extremely vulnerable to fire, which is one of the most effective methods of fighting them. Silver also works well, as does any sort of shock wave. Archespores do not like strong vibrations, which cause them to flee underground at once. Due to the nature of their origins, oil damaging to cursed beings can also be useful against them.",
-                    "https://static.wikia.nocookie.net/witcher/images/c/cd/Tw3_journal_echinops.png/revision/latest/scale-to-width-down/654?cb=20160605082337",
+                    "https://static.wikia.nocookie.net/witcher/images/c/cd/Tw3_journal_echinops.png/revision/latest?cb=20160605082337",
                     "Toussaint",
                     "Cursed oil,Aard,Igni",
                     "Archespore juice,Archespore tendril,Green mutagen,Monster spore,Venom extract",
@@ -51,10 +51,10 @@ public class CursedOnesConfig {
                             "As soon as they enter open terrain, they leap to attack with astonishing speed, mauling their prey with their sharp claws, long teeth and the sheer force of their momentum.\n" +
                             "Panthers are known to retreat mid-fight, yet do not let yourself be fooled into a false sense of security. This is but a ruse to allow them to attack again, by surprise. Never drop your guard until you see the animal drop dead.\n\n" +
                             "Panthers are vulnerable to the effects of all the Signs, as well as bombs and oils.",
-                    "https://static.wikia.nocookie.net/witcher/images/d/da/Tw3_journal_panther.png/revision/latest/scale-to-width-down/350?cb=20160531173331",
-                    "Toussaint",
-                    "Beast oil",
-                    "Fur scrap,Cured leather,Raw meat",
+                    "https://static.wikia.nocookie.net/witcher/images/4/48/Tw3_journal_berserker.png/revision/latest?cb=20160408152240",
+                    "Skellige,Vildkaarls' village",
+                    "Devil's Puffball,Cursed oil,Quen,Igni",
+                    "Bear fat,Berserker hide,Raw meat",
                     LocalDate.now(),
                     cursedOnes
             );
@@ -68,7 +68,7 @@ public class CursedOnesConfig {
                             "A botchling will emerge from its lair at night to lurk by the bedside of an expectant mother, draining her strength and that of her unborn progeny as she sleeps. A woman thus beleaguered first suffers from troubling dreams, then fever, delirium and a general weakening of the flesh. After a few such nights she is enfeebled and unable to defend herself - it is then the botchling attacks directly, sinking its long, sharp fangs into her body and drinking her blood until mother and fetus perish together.\n" +
                             "A botchling stands around a foot and a half in height, but, when threatened and if gorged with blood, it can change form. At such times it grows into a deformed man, hunched over and striding, ape-like, on its forearms. Stronger and fiercer after this alteration, it hurls itself into direct, physical combat, gnashing at its opponent or attacking him with sharp claws.\n" +
                             "A botchling's curse can be lifted by transforming it into a lubberkin - a guardian spirit of the hearth that watches over the family it never knew in the house it never could call home.",
-                    "https://static.wikia.nocookie.net/witcher/images/4/4c/Tw3_journal_botchling.png/revision/latest/scale-to-width-down/350?cb=20170602062312",
+                    "https://static.wikia.nocookie.net/witcher/images/4/4c/Tw3_journal_botchling.png/revision/latest?cb=20170602062312",
                     "Crow's Perch",
                     "Cursed oil,Axii",
                     "Lesser red mutagen,Monster ear,Monster blood,Monster bone,Necrophage hide,Rotting flesh,Monster brain",
@@ -82,7 +82,7 @@ public class CursedOnesConfig {
                     "The girl walked up to the edge of the pond. There, squatting amidst the fragrant lilies and broad lily-pads, she saw a most unusual sight: a small green frog with a golden crown perched on its warty head. Charmed by this curious little creature, the girl picked it up and gave it a kiss. Immediately the little frog transformed into a handsome prince. Overcome with gratitude, he asked the girl to be his wife.\n" +
                             "– folk tale, author unknown\n" +
                             "Timeless tales always carry within them a grain of truth. The legend of the frog prince is no exception, or at least that's what the folk of Oxenfurt wished to believe when they found out a monstrous toad lurked in their city sewers. The women who hunted it in search of romance and a better life, however, found their tales had a most unhappy ending. The creature they encountered was no small, sweet frog but a bloodthirsty beast, who not only did not let them in for a kiss, but instead greedily devoured them and anything else that strayed into its slime-covered lair.",
-                    "https://static.wikia.nocookie.net/witcher/images/f/ff/Tw3_journal_the_toad_prince.png/revision/latest/scale-to-width-down/350?cb=20151101193448",
+                    "https://static.wikia.nocookie.net/witcher/images/f/ff/Tw3_journal_the_toad_prince.png/revision/latest?cb=20151101193448",
                     "Oxenfurt sewers",
                     "Northern Wind,Golden Oriole,Cursed oil,Yrden sign",
                     "None",
@@ -94,7 +94,7 @@ public class CursedOnesConfig {
                     "ulfhedinn",
                     "Ulfhedinn",
                     "",
-                    "https://static.wikia.nocookie.net/witcher/images/0/06/Tw3_journal_ulfhedinn.png/revision/latest/scale-to-width-down/350?cb=20160408154719",
+                    "https://static.wikia.nocookie.net/witcher/images/0/06/Tw3_journal_ulfhedinn.png/revision/latest?cb=20160408154719",
                     "Skellige",
                     "Moon Dust,Devil's Puffball,Cursed oil,Igni",
                     "Werewolf hide,Werewolf mutagen,Werewolf saliva,Monster essence",
@@ -110,7 +110,7 @@ public class CursedOnesConfig {
                             "Werewolves are creatures with both men and wolves inside them. When in beastly form, they take the worst traits of each: the wolf's drive to kill and hunger for raw flesh and the man's cruel and calculating intelligence. A werewolf's condition comes about through a curse, and the transformations happen outside his conscious control. When he reverts to human form, he has no memory of his deeds – otherwise he would surely go mad and take his own life.\n" +
                             "Werewolves are active at night, particularly when the moon is full. Though they hunt alone, when threatened they will summon wolves to aid them. Werewolves rarely feel the need to flee, for few adversaries put up much of a fight against them. They strike as swiftly as lightning with claws sharp as razors and regenerate any damage received in mere moments. When fighting werewolves a witcher should wield a blade covered in oil harmful to the cursed and have a large supply of Devil's Puffballs handy.\n" +
                             "A werewolf's curse can at times be lifted, yet there is no universal, surefire method for doing this. A witcher seeking to undertake such a task must there equip himself with a great deal of patience – and sturdy armor.",
-                    "https://static.wikia.nocookie.net/witcher/images/b/ba/Tw3_journal_werewolf.png/revision/latest/scale-to-width-down/350?cb=20160408161038",
+                    "https://static.wikia.nocookie.net/witcher/images/b/ba/Tw3_journal_werewolf.png/revision/latest?cb=20160408161038",
                     "Velen,Skellige",
                     "Moon Dust,Devil's Puffball,Cursed oil,Igni",
                     "Werewolf hide,Werewolf mutagen,Werewolf saliva",
