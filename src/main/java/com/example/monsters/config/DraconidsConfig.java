@@ -28,7 +28,7 @@ public class DraconidsConfig {
                             "When preparing to fight such a creature one should drink Golden Oriole, which will provide resistance to its venom, and also prepare Dancing Star or shrapnel bombs, which work particularly well against basilisks.\nBasilisk leather is a highly-valued material used to make fashionable shoes and women's handbags. For this reason many men, their courage girded by goldlust, take to hunting them. Most of these hunts end in disaster, " +
                             "but some do manage to bag their prey, which has led to a drastic decline in this creature's numbers in recent years. " +
                             "Some mages and druids are of the opinion that basilisks should be included in programs meant to safeguard dying species. Everyone else thinks those mages and druids have gone completely mad.",
-                    "https://static.wikia.nocookie.net/witcher/images/b/bc/Tw3_journal_basilisk.png/revision/latest/scale-to-width-down/350?cb=20160408164921",
+                    "https://static.wikia.nocookie.net/witcher/images/b/bc/Tw3_journal_basilisk.png/revision/latest?cb=20160408164921",
                     "Velen",
                     "Golden Oriole,Grapeshot,Draconid oil,Aard",
                     "Basilisk venom,Basilisk hide,Basilisk mutagen",
@@ -45,7 +45,7 @@ public class DraconidsConfig {
                             "Cockatrices thrive in dark caves, abandoned ruins, cobwebbed dungeons and old basements. Though small compared to griffins and manticores, they are more than capable of killing anyone who stumbles across them in a dark corridor.\n" +
                             "Cockatrices do not shun direct fights, in which they strike furiously with wing and tail in an attempt to exhaust their foes. Blows from their beaks are especially dangerous, as they aim with deadly precision at exposed flesh and vital organs and leave bleeding, life-threatening wounds. When fighting them one " +
                             "should make liberal use of draconid oil as well as Grapeshot, whose shrapnel will pierce their delicate wings with ease.",
-                    "https://static.wikia.nocookie.net/witcher/images/2/2a/Tw3_journal_cockatrice.png/revision/latest/scale-to-width-down/350?cb=20160408171230",
+                    "https://static.wikia.nocookie.net/witcher/images/2/2a/Tw3_journal_cockatrice.png/revision/latest?cb=20160408171230",
                     "Velen,Redania",
                     "Grapeshot,Draconid oil,Aard",
                     "Cockatrice egg,Cockatrice mutagen,Cockatrice stomach,Cockatrice trophy,Monster carapace",
@@ -59,7 +59,7 @@ public class DraconidsConfig {
                     "Forktails... Bah! Fuckers' tails're more like cleavers.\n" +
                             "– Yavinn Buck, veteran of the Mahakaman Volunteer Regiment\n" +
                             "Forktails owe their quaint name to the long sharp growths at the tip of their tails. A blow from this weapon can slice an oaken shield in two – along with the arm that was carrying it. Thus, though its name conjures images of cutlery, fighting a forktail is nothing like a dinner party and ends in death rather than dessert.",
-                    "https://static.wikia.nocookie.net/witcher/images/2/2f/Tw3_journal_forktail.png/revision/latest/scale-to-width-down/350?cb=20160408181043",
+                    "https://static.wikia.nocookie.net/witcher/images/2/2f/Tw3_journal_forktail.png/revision/latest?cb=20160408181043",
                     "Velen,Skellige,White Orchard",
                     "Golden Oriole,Grapeshot,Draconid oil,Aard",
                     "Forktail mutagen,Forktail hide,Dragon scales,Monster liver,Monster eye,Raw meat",
@@ -77,7 +77,7 @@ public class DraconidsConfig {
                             "What most men do not know is that some monsters also possess such knowledge. For example, a royal wyvern from Velen had learned the danger of exposing itself to human eyes and arrows by flying high to pick out its prey from afar. Instead, it would lurk by the roadside and wait for military transports. In this way it grew fat on salted pork and beer, expanding until it resembled a dragon more than other, lesser members of its own kind.\n" +
                             "The witcher thus knew this beast would be much stronger and more resilient than a normal wyvern. Even one blow from it could kill - which is why he would need to avoid its charge at all costs. He would also be wise to force it to the ground with his crossbow or a bomb whenever it tried to fly into the air and hurtle down in a deadly dive.\n" +
                             "In the end the witcher slew the hideous creature, though not without some difficulty. Thanks to this feat, the soldiers could once again send shipments of food and equipment needed to conduct the war. Whether that was a good or a bad thing - that is an entirely different matter.",
-                    "https://static.wikia.nocookie.net/witcher/images/8/8a/Tw3_journal_royalwyvern.png/revision/latest/scale-to-width-down/350?cb=20160408182854",
+                    "https://static.wikia.nocookie.net/witcher/images/8/8a/Tw3_journal_royalwyvern.png/revision/latest?cb=20160408182854",
                     "Velen,Skellige,White Orchard",
                     "Golden Oriole,Grapeshot,Draconid oil,Aard",
                     "Wyvern trophy,Wyvern mutagen,Wyvern egg,Anathema",
@@ -93,7 +93,7 @@ public class DraconidsConfig {
                             "– Conversation overheard at Crow's Perch\n" +
                             "The monster tormenting the residents of Crow's Perch turned out to be a particularly nasty cockatrice. Geralt was not surprised the baron's men had been unable to stop it. They could not possibly withstand the surgical precision of its strikes, which slice open arteries and provoke an outpouring of blood only the Swallow potion could hope to stop. Neither did they know to force it to the ground with a crossbow, a bomb or a Sign, and then evade its charge by rolling under the monster's outstretched wing.\n" +
                             "Just when it seemed the villagers would have to learn to live in the shadow of a bloodthirsty beast, to always look to the sky with fear, the witcher arrived - and put an end to the shrieker for good.",
-                    "https://static.wikia.nocookie.net/witcher/images/7/73/Tw3_journal_shrieker.png/revision/latest/scale-to-width-down/350?cb=20160407141943",
+                    "https://static.wikia.nocookie.net/witcher/images/7/73/Tw3_journal_shrieker.png/revision/latest?cb=20160407141943",
                     "Cave near Crow's Perch",
                     "Grapeshot,Draconid oil,Aard",
                     "Cockatrice egg,Cockatrice mutagen,Cockatrice stomach,Cockatrice trophy,Dwarven axe,Monster carapace,Monster feather,Monster saliva",
@@ -108,10 +108,74 @@ public class DraconidsConfig {
                             "- Anatole Vizholy, shoemaker from Beauclair\n" +
                             "Geralt always liked looking at things that don't exist. Be it a vampire with a human heart of the last basilisk of a species that no scholar has classified, discovering something thought not to be there to be discovered caused him great pleasure. That is why he took an interest in a contract which, at first glance, seemed banal, but proved to be very intriguing. It concerned the last basilisk of the nearly-extinct species Regulus Platinum.\n" +
                             "In the end, Geralt decided not to kill the basilisk, for who in his right mind would raise his sword against a living legend?",
-                    "https://static.wikia.nocookie.net/witcher/images/b/b2/Tw3_journal_silver_basilisk.png/revision/latest/scale-to-width-down/350?cb=20170302011053",
+                    "https://static.wikia.nocookie.net/witcher/images/b/b2/Tw3_journal_silver_basilisk.png/revision/latest?cb=20170302011053",
                     "Toussaint",
                     "Golden Oriole,Draconid oil,Aard,Igni",
                     "None",
+                    LocalDate.now(),
+                    draconids
+            );
+
+            Monster slyzard = new Monster(
+                    "slyzard",
+                    "Slyzard",
+                    "Some peasants once offered me a king's ransom to slay a slyzard. A damned hefty purse, chock full o' gold... But I turned 'em down. Coin's no good if you're dead. And a slyzard, that's no fuckin' forktail.\n" +
+                            "– Zator, one of the Crinfrid Reavers\n" +
+                            "Slyzards are often mistaken for wyverns or forktails. Yet make no mistake: slyzards are nasty, terribly dangerous beasts, and confusing them for wyverns will end very badly for the confuser. While a wyvern can tear apart and devour an untrained man in seconds, only a slyzard can first bake him to a crisp with a waft of fiery breath.\n" +
+                            "Slyzards are keenly aggressive and attack from both ground and air. Their goal during a fight is to get close enough to their foe to injure it with a breath of fire or knock it down with a sonic blast. Like wyverns, slyzards also attack with venom-spiked tails.\n" +
+                            "Slyzards like to disengage mid-fight to fly into the air and plummet down at high speed while spewing out balls of fire.\n" +
+                            "Right before these igneous missiles emerge, you can observe a fiery ball forming in the monster's maw. While airborne, a slyzard can also attack with its claws and teeth.\n" +
+                            "It is worthwhile to employ the Aard and Igni Signs to force slyzards to the ground. They are not, however, vulnerable to burning. Before tackling one of them, be sure to coat your blade in draconid oil.",
+                    "https://static.wikia.nocookie.net/witcher/images/3/30/Tw3_journal_dracolizard.png/revision/latest?cb=20160605093344",
+                    "Dragon Mountains near Barefield,Toussaint",
+                    "Grapeshot,Draconid oil,Aard,Quen",
+                    "Slyzard scale plate",
+                    LocalDate.now(),
+                    draconids
+            );
+
+            Monster slyzardMatriarch = new Monster(
+                    "slyzard-matriarch",
+                    "Slyzard Matriarch",
+                    "If you ever find yourself facing a monster that breathes fire, strikes with a tail tipped with venomous spines, bites with sharp teeth and swipes with even sharper claws and tends to knock its prey to the ground with a sonic blast, " +
+                            "then you are fighting a slyzard. With an arsenal like that, it comes as no surprise folk often mistake these draconids for dragons. Yet the experts (meaning witchers) know " +
+                            "slyzards constitute an entirely separate species, much smaller than dragons and far less dangerous. With one exception: slyzard females in mating season, or, even worse, just after laying their eggs. " +
+                            "When fighting such individuals, my suggestion is to get as far as possible from the danger as quickly as possible, preferably by running, at full tilt, without looking back.",
+                    "https://static.wikia.nocookie.net/witcher/images/a/ae/Tw3_journal_slyzard_matriarch.png/revision/latest?cb=20170302011055",
+                    "Toussaint",
+                    "Grapeshot,Draconid oil,Aard,Quen",
+                    "Slyzard trophy",
+                    LocalDate.now(),
+                    draconids
+            );
+
+            Monster dragonOfFyresdal = new Monster(
+                    "the-dragon-of-fyresdal",
+                    "The Dragon of Fyresdal",
+                    "It's got scales, wings, claws... A dragon's a dragon! No point gabbin', just go kill it!\n" +
+                            "– Vagn, village elder of Fyresdal\n" +
+                            "Few truly know what a dragon looks like, for those who have seen one up-close rarely have a chance to share their impressions. That is why people are forever mistaking other monsters for dragons. This was the case in Fyresdal, where the so-called dragon wreaking havoc turned out to be a forktail.\n" +
+                            "Yet this mistaken attribution did not mean there was no reason to worry. The forktail harassing Fyresdal was a particularly vile representative of its kind, one equipped with an endless store of deadly venom. Fighting it without first drinking a regenerative potion or a poison antidote would be tantamount to suicide.\n" +
+                            "In his fight with the forktail, Geralt gave proof not only of his masterful swordsmanship, but also of a previously-undemonstrated flair for shepherdry. With a little help from a brave sheep lent by the village elder, he lured the monster into a trap - then ended its life.",
+                    "https://static.wikia.nocookie.net/witcher/images/5/59/Tw3_journal_thedragonoffyresdal.png/revision/latest?cb=20160329105217",
+                    "Abandoned siege tower outside Fyresdal",
+                    "Golden Oriole,Grapeshot,Draconid oil,Aard",
+                    "Dragon scales,Forktail mutagen,Forktail hide,Forktail trophy,Monster bone,Monster heart,Monster tongue",
+                    LocalDate.now(),
+                    draconids
+            );
+
+            Monster wyverns = new Monster(
+                    "wyverns",
+                    "Wyverns",
+                    "Most dangerous of all are the royal wyverns. Or, as they're called in some circles, the royal pains in the arse.\n" +
+                            "– Albina Tottelkampf, lecturer in natural sciences at Aretuza\n" +
+                            "Wyverns are often mistaken for dragons, and, though they are much smaller than their more famous kin and do not breathe fire, they are likewise extremely dangerous monsters. Especially feared are the so-called royal wyverns who, " +
+                            "like their namesake monarchs, are exceptionally ornery and extremely deadly.",
+                    "https://static.wikia.nocookie.net/witcher/images/2/2a/Tw3_journal_wyvern.png/revision/latest?cb=20160408185115",
+                    "Velen,Skellige",
+                    "Golden Oriole,Grapeshot,Draconid oil,Aard",
+                    "Dragon scales,Monster blood,Monster bone,Monster brain,Monster claw,Monster eye,Wyvern egg,Wyvern hide,Wyvern mutagen,Wyvern trophy",
                     LocalDate.now(),
                     draconids
             );
@@ -124,7 +188,11 @@ public class DraconidsConfig {
                             forktail,
                             royalWyvern,
                             shrieker,
-                            silverBasilisk)
+                            silverBasilisk,
+                            slyzard,
+                            slyzardMatriarch,
+                            dragonOfFyresdal,
+                            wyverns)
             );
         };
     }
