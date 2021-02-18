@@ -4,7 +4,7 @@ A minimal application to learn the fundamentals of Spring Boot with Java.
 The REST API serves data on creatures found in The Witcher 3: Wild Hunt. 
 This is bundled with an Angular application served from Spring Boot's 
 resources/static folder which will act as the UI. The application is deployed
-to AWS Elastic Beanstalk.
+to AWS Elastic Beanstalk using CD/CD best practices with AWS CodePipeline and CodeBuild.
 
 The frontend application can be accessed at: 
 [http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com](http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com)
@@ -251,3 +251,4 @@ the category.
 * [Invalidate cache and reload in IntelliJ](https://stackoverflow.com/questions/52091449/class-not-found-in-module-warning-when-try-to-create-run-debug-configuration-in)
 * [Angular and Spring Boot Integration](https://www.youtube.com/watch?v=JJoBUdMJf1I)
 * [Deploy Spring Boot to AWS Elastic Beanstalk](https://www.youtube.com/watch?v=6SadWaJrtnY)
+* [Configure CD/CD using AWS CodePipeline and CodeBuild](https://www.youtube.com/watch?v=agDw-Ak4lAI&t=315s)
