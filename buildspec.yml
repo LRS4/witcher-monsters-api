@@ -4,10 +4,23 @@ phases:
   install:
     runtime-versions:
       java: corretto11
+    commands:
+      - echo installing nodejs...
+      - curl -sL https://deb.nodesource.com/setup_12.x | bash -
+      - apt-get install -y nodejs
+  pre_build:
+    commands:
+      - echo install dependencies
+      - npm install -g @angular/cli
+      - cd src/main/client
+      - ls
+      - npm install
+      - cd ..
+      - cd ..
+      - cd ..
   build:
     commands:
-      - ls
-      - mvn test
+      - echo building application
       - mvn install
 artifacts:
   files:
