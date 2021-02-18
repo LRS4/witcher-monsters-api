@@ -3,7 +3,11 @@
 A minimal application to learn the fundamentals of Spring Boot with Java.
 The REST API serves data on creatures found in The Witcher 3: Wild Hunt. 
 This is bundled with an Angular application served from Spring Boot's 
-resources/static folder which will act as the UI.
+resources/static folder which will act as the UI. The application is deployed
+to AWS Elastic Beanstalk.
+
+The frontend application can be accessed at: 
+[http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com](http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com)
 
 I hope the API will help anyone who wants to build a
 frontend application of viewing journal entries, similar to the in-game
@@ -18,6 +22,10 @@ which is licensed under the Creative Commons Attribution-Share Alike License 3.0
 
 The entry point for the application is within the `/src/main/java/MonstersApplication.java` file.
 
+# Base URL
+
+`GET http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com`
+
 # REST API
 
 The REST API endpoints are described below. Spaces are hyphenated
@@ -29,7 +37,7 @@ for database indexing.
 
 `GET /api/v1/monster/`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/
 
 ### Response
 
@@ -48,7 +56,7 @@ for database indexing.
 
 `GET /api/v1/monster/category/vampires`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/category/vampires
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/category/vampires
 
 ### Response
 
@@ -67,7 +75,7 @@ for database indexing.
 
 `GET /api/v1/monster/ice-elemental`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/ice-elemental
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/ice-elemental
 
 ### Response
 
@@ -86,7 +94,7 @@ for database indexing.
 
 `GET /api/v1/monster/non-existent-monster`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/non-existent-monster
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/non-existent-monster
 
 ### Response
 
@@ -105,7 +113,7 @@ for database indexing.
 
 `GET /api/v1/monster/categories/all`
 
-    curl -i -H 'Accept: application/json' http://localhost:8080/api/v1/monster/categories/all
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/categories/all
 
 ### Response
 
@@ -242,3 +250,4 @@ the category.
 * [Hikari Database Connection Settings](https://github.com/brettwooldridge/HikariCP#configuration-knobs-baby)
 * [Invalidate cache and reload in IntelliJ](https://stackoverflow.com/questions/52091449/class-not-found-in-module-warning-when-try-to-create-run-debug-configuration-in)
 * [Angular and Spring Boot Integration](https://www.youtube.com/watch?v=JJoBUdMJf1I)
+* [Deploy Spring Boot to AWS Elastic Beanstalk](https://www.youtube.com/watch?v=6SadWaJrtnY)
