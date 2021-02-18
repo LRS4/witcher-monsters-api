@@ -6,6 +6,7 @@ phases:
       java: corretto11
   build:
     commands:
+      - ls
       - mvn test
       - mvn install
 artifacts:
