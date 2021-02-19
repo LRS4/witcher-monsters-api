@@ -239,6 +239,7 @@ the category.
     DATABASE_USER = The username for the PostGreSQL database
     DATABASE_PASSWORD = The password for the PostGreSQL database
     MONSTERS_API_ADMIN_KEY = The key for admin users. Secures the add new and update existing routes against the x-api-key auth header.
+    SERVER_PORT = 5000
 
 [Reference](https://stackoverflow.com/questions/35531661/using-env-variable-in-spring-boots-application-properties)
 
@@ -252,3 +253,4 @@ the category.
 * [Angular and Spring Boot Integration](https://www.youtube.com/watch?v=JJoBUdMJf1I)
 * [Deploy Spring Boot to AWS Elastic Beanstalk](https://www.youtube.com/watch?v=6SadWaJrtnY)
 * [Configure CD/CD using AWS CodePipeline and CodeBuild](https://www.youtube.com/watch?v=agDw-Ak4lAI&t=315s)
+* [Artifact JAR must be top level for Elastic Beanstalk](https://stackoverflow.com/questions/60840569/aws-codepipeline-deploy-spring-boot-application-to-elastic-beanstalk)
