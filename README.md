@@ -7,7 +7,7 @@ resources/static folder which will act as the UI. The application is deployed
 to AWS Elastic Beanstalk using CD/CD best practices with AWS CodePipeline and CodeBuild.
 
 The frontend application can be accessed at: 
-[http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com](http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com)
+[http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com](http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com)
 
 I hope the API will help anyone who wants to build a
 frontend application of viewing journal entries, similar to the in-game
@@ -24,7 +24,7 @@ The entry point for the application is within the `/src/main/java/MonstersApplic
 
 # Base URL
 
-`GET http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com`
+`GET http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com`
 
 # REST API
 
@@ -37,7 +37,7 @@ for database indexing.
 
 `GET /api/v1/monster/`
 
-    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/api/v1/monster/
 
 ### Response
 
@@ -56,7 +56,7 @@ for database indexing.
 
 `GET /api/v1/monster/category/vampires`
 
-    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/category/vampires
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/api/v1/monster/category/vampires
 
 ### Response
 
@@ -75,7 +75,7 @@ for database indexing.
 
 `GET /api/v1/monster/ice-elemental`
 
-    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/ice-elemental
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/api/v1/monster/ice-elemental
 
 ### Response
 
@@ -94,7 +94,7 @@ for database indexing.
 
 `GET /api/v1/monster/non-existent-monster`
 
-    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/non-existent-monster
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/api/v1/monster/non-existent-monster
 
 ### Response
 
@@ -113,7 +113,7 @@ for database indexing.
 
 `GET /api/v1/monster/categories/all`
 
-    curl -i -H 'Accept: application/json' http://monsters-env.eba-tighwhz4.eu-west-1.elasticbeanstalk.com/api/v1/monster/categories/all
+    curl -i -H 'Accept: application/json' http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com/api/v1/monster/categories/all
 
 ### Response
 
