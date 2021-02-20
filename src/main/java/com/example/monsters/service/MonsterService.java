@@ -37,6 +37,10 @@ public class MonsterService {
         this.categoryRepository = categoryRepository;
     }
 
+    //endregion
+
+    //region Service methods
+
     public List<Monster> getMonsters() {
         return monsterRepository.findAll();
     }
@@ -45,9 +49,6 @@ public class MonsterService {
         return monsterRepository.findByCategoryName(categoryName);
     }
 
-    //endregion
-
-    //region Service methods
     public Optional<Monster> getMonsterByName(String monsterName) {
         Optional<Monster> monster = monsterRepository
                 .findMonsterByName(monsterName);
