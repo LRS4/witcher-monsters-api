@@ -232,10 +232,5 @@ public class MonsterServiceTests {
         System.out.println(deleteResponse);
     }
 
-    @Test
-    void itShouldFailDuringPipeline() {
-        assertThat(1).isEqualTo(2);
-    }
-
     //endregion
 }
