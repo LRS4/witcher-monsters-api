@@ -27,7 +27,7 @@ public class BeastConfig {
                             "– Jahne Oldak, royal huntsman\n\n" +
                             "Bears are omnivores – meaning men find a place in their diet beside berries, roots and salmon. When they snack on humans, they most frequently partake of the meat of travelers unwittingly trespassing on their territory, or else that of hunters for whom besting such a creature is a lifelong ambition.\n" +
                             "There are several subspecies of bears – black bears, polar bears and cave bears – which differ from one another in coloring as well as in size and strength. All share one trait in common, however: a near-unmatched ability to kill.",
-                    "https://static.wikia.nocookie.net/witcher/images/0/07/Tw3_journal_bear.png/revision/latest?cb=20160304204324",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822220/App%20Images/Witcher%203%20Bestiary/Beasts/654_brssrh.png",
                     "Velen,Skellige,White Orchard,Toussaint",
                     "Beast oil,Quen",
                     "Bear fat,Bear hide,Raw meat,White bear hide",
@@ -49,7 +49,7 @@ public class BeastConfig {
                             "As soon as they enter open terrain, they leap to attack with astonishing speed, mauling their prey with their sharp claws, long teeth and the sheer force of their momentum.\n" +
                             "Panthers are known to retreat mid-fight, yet do not let yourself be fooled into a false sense of security. This is but a ruse to allow them to attack again, by surprise. Never drop your guard until you see the animal drop dead.\n\n" +
                             "Panthers are vulnerable to the effects of all the Signs, as well as bombs and oils.",
-                    "https://static.wikia.nocookie.net/witcher/images/d/da/Tw3_journal_panther.png/revision/latest?cb=20160531173331",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822259/App%20Images/Witcher%203%20Bestiary/Beasts/654_tavvhb.png",
                     "Toussaint",
                     "Beast oil",
                     "Fur scrap,Cured leather,Raw meat",
@@ -70,7 +70,7 @@ public class BeastConfig {
                             "With gently smiling jaws!\n" +
                             "Louis of Charolle, mathematician, author and poet\n" +
                             "These woodland beasts are as \"wild\" – untamed, nasty and aggressive – as their name indicates. To this day, many peasants in outlying Kaedweni villages believe wild boars persist on a diet of young maids, though in truth they most often slate their hunger with roots and acorns. Do not think this vegetarian diet makes them harmless, however. In fact, these animals' stout build and sharp teeth render them veritable fur-covered combat machines. Mother Nature has additionally equipped them with dual pairs of tusks - upper \"pipes\" and lower \"sabres\" - and this weaponry's sum effect is to make the beasts the terrors of the woods, a threat to all who venture or dwell there, human, humanoid and otherwise. Boars also have hard, club-like snouts, which some peasants call their \"whistles,\" though no boar has ever been heard to make such a noise. Instead, they emit a characteristic grunt, which sounds to some like the snoring of an extremely overweight man. Another peasant belief claims boars have extremely prickly natures, and, if offended, will vent their anger by knocking down fences and gobbling up potatoes. Though they sometimes live alone, boars usually appear in small groups of 3 to 5 specimens.",
-                    "https://static.wikia.nocookie.net/witcher/images/9/93/Tw3_journal_wild_boar.png/revision/latest?cb=20170501180811",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822285/App%20Images/Witcher%203%20Bestiary/Beasts/654_xo4mmp.png",
                     "Gustfields,Toussaint",
                     "Northern Wind,Beast oil,Igni,Yrden",
                     "Boar tusk,Boar pelt,Raw meat",
@@ -87,7 +87,7 @@ public class BeastConfig {
                             "Geralt and Syanna met the Big Bad Wolf while he was nursing a nasty hangover and was not eager to cooperate. Yet since our heroes needed a bean which the wolf had, they forced him to act out his tale.\n" +
                             "That tale ended as it always had: the Big Bad Wolf attacked the Hunter (played by Geralt), biting and clawing him fiercely while his own wounds healed almost instantaneously. Inevitably, however, the Big Bad Wolf was killed and his stomach cut open.\n" +
                             "This time, out came not a grandma and her granddaughter, but a magic bean.",
-                    "https://static.wikia.nocookie.net/witcher/images/d/db/Tw3_journal_bigbadwolf.png/revision/latest?cb=20160605085157",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822301/App%20Images/Witcher%203%20Bestiary/Beasts/latest_c75yif.png",
                     "Land of a Thousand Fables",
                     "Devil's Puffball,Beast oil",
                     "Magic dust,Red mutagen,Fake tooth,Corkscrew,Bottle caps",
@@ -102,7 +102,7 @@ public class BeastConfig {
                             "When Geralt identified the Beast, he discovered it was a higher vampire, meaning one of the most difficult foes a witcher can come to face.\n" +
                             "Higher vampires are superhumanly strong and fast. They can turn completely invisible, and each comes with its own personalized set of talents and abilities perfected through centuries of existence.\n" +
                             "When Geralt realized he was dealing with such a creature, he swore foully and realized the rumors about the Beast had not been exaggerated in the slightest.",
-                    "https://static.wikia.nocookie.net/witcher/images/b/b5/Tw3_journal_dettlaff_vampire.png/revision/latest?cb=20160601042441",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822313/App%20Images/Witcher%203%20Bestiary/Beasts/654_an6fji.png",
                     "Toussaint",
                     "Vampire oil,Black Blood,Quen",
                     "None",
@@ -118,7 +118,7 @@ public class BeastConfig {
                             "Once upon a time wolves were the absolute rulers of the forest. Men used them to frighten children, while adults, too, trembled at the sound of their howling. Post-Conjunction monsters not only pushed wolves into the deepest wilds but also took over their place in human nightmares. Yet this does not mean the old predators ceased to be a danger. Wolves do not have a drop of magic within them, breathe no fire and spit no acid, but that in no way stops them from killing unwary travelers and hunters.\n" +
                             "Particularly dangerous are wargs, a nasty and ferocious subspecies of wolf, and the snow-white wolves which today can only be found in the wild highlands of the Skellige archipelago.\n" +
                             "Wolves usually feed in packs counting from a handful to over a dozen members, though some particularly strong males hunt alone. Though wolves are weaker than many post-Conjunction monsters, they make up for any lack of strength with their intelligence. When fighting them one must be especially careful not to become surrounded. The presence of wolves can also signal more serious trouble – these predators often share their hunting grounds with werewolves and leshens.",
-                    "https://static.wikia.nocookie.net/witcher/images/6/62/Tw3_journal_wolf.png/revision/latest?cb=20160409074701",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822333/App%20Images/Witcher%203%20Bestiary/Beasts/362_ovi368.png",
                     "Velen,White Orchard,Skellige,Toussaint",
                     "Beast oil",
                     "Raw meat,Wolf hide,Wolf's liver,Dog tallow",
@@ -133,7 +133,7 @@ public class BeastConfig {
                             "– Alfred Pankratz, beggar from Novigrad\n" +
                             "Some claim dogs are reflections of their masters. A well-treated pet repays his owner with loyalty and trust, whereas an ill-treated one repays this treatment in kind as well, meeting yells with barks and kicks with bites. Since there is an abundance of bad men, so, too, is there an abundance of bad dogs. Most dangerous of all are the vagrant mutts who have lost all respect for men and developed a taste for blood and carrion.\n" +
                             "Dogs usually attack in packs, choosing isolated victims, especially ones in whom they sense some kind of weakness. Packs of rabid dogs usually only dare attack children, drunkards, the elderly and cripples. Yet when backed into a corner, they will defend themselves with frothing bites and sharp claws against all and sundry.",
-                    "https://static.wikia.nocookie.net/witcher/images/e/e4/Tw3_journal_dog.png/revision/latest?cb=20160304193515",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822400/App%20Images/Witcher%203%20Bestiary/Beasts/654_omniqv.png",
                     "Velen,Novigrad,Skellige",
                     "Beast oil",
                     "Dog tallow,Raw meat",
@@ -149,7 +149,7 @@ public class BeastConfig {
                             "\n" +
                             "The three little pigs are perfect examples of a rather unfortunate phenomenon. Leave even a kind-hearted, warm, naively benign creature to fend for itself, and it won't remain so benign for long.\n" +
                             "The three little pigs from the Land of a Thousand Fables were left for years without Artorius Vigo's supervision. During this time they went completely feral, transforming into three wild boars which attacked anyone who dared approach their ruined home.",
-                    "https://static.wikia.nocookie.net/witcher/images/b/b3/Tw3_journal_three_little_pigs.png/revision/latest?cb=20161031083059",
+                    "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822422/App%20Images/Witcher%203%20Bestiary/Beasts/latest_tprz6k.png",
                     "Land of a Thousand Fables",
                     "Beast oil",
                     "Magic dust",
