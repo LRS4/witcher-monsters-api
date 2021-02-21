@@ -255,6 +255,8 @@ the category.
 * [Configure CD/CD using AWS CodePipeline and CodeBuild](https://www.youtube.com/watch?v=agDw-Ak4lAI&t=315s)
 * [Artifact JAR must be top level for Elastic Beanstalk](https://stackoverflow.com/questions/60840569/aws-codepipeline-deploy-spring-boot-application-to-elastic-beanstalk)
 * [Adding unit tests and mocks](https://www.youtube.com/watch?v=kXhYu939_5s)
+* [Testing Web Controller HTTP](https://reflectoring.io/spring-boot-web-controller-test/)
 * [REST API controller unit testing](https://www.youtube.com/watch?v=RbZvXCAtMus)
+* [Unit testing with Spring MVC](https://memorynotfound.com/unit-test-spring-mvc-rest-service-junit-mockito/)
 * [Preventing CommandLineRunner during tests](https://www.baeldung.com/spring-junit-prevent-runner-beans-testing-execution)
 * [Spring Boot Tutorial](https://www.springboottutorial.com)
