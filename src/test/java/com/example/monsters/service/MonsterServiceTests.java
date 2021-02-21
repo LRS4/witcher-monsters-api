@@ -5,11 +5,9 @@ import com.example.monsters.model.Monster;
 import com.example.monsters.repository.CategoryRepository;
 import com.example.monsters.repository.MonsterRepository;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.ActiveProfiles;
@@ -19,7 +17,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.mockito.Mockito.*;
@@ -230,6 +227,36 @@ public class MonsterServiceTests {
         // Assert
         verify(monsterRepository, times(1)).deleteById(monsterId);
         System.out.println(deleteResponse);
+    }
+
+    @Test
+    void itShouldUpdateAnExistingMonster() {
+        // Arrange
+        String monsterName = "bears";
+        Optional<Monster> existingMonster = testMonsters
+                .stream()
+                .filter(m -> m.getName().equals(monsterName))
+                .findFirst();
+
+        Long monsterId = existingMonster.get().getId();
+        Long categoryId = existingMonster.get().getCategory().getId();
+        existingMonster.get().setEntry("Entry is now updated");
+
+        // Act
+        when(monsterRepository.existsById(anyLong())).thenReturn(true);
+        when(monsterRepository.findById(anyLong()))
+                .thenReturn(Optional.of(existingMonster.get()));
+        when(categoryRepository.findById(anyLong()))
+                .thenReturn(Optional.of(existingMonster.get().getCategory()));
+
+        String updateResponse = monsterService.updateMonster(monsterId,
+                categoryId,
+                existingMonster.get(),
+                apiAdminKey);
+
+        // Assert
+        assertThat(updateResponse).contains("Monster with ID 1 updated.");
+        System.out.println(updateResponse);
     }
 
     //endregion
