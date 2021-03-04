@@ -1,21 +1,22 @@
 <app-navbar></app-navbar>
 
 <main class="container">
-
-  <div class="text-center py-5 px-3">
-    <h1>Bootstrap starter template</h1>
-    <p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a
-      mostly barebones HTML document.</p>
+  <div class="row">
+    <div class="col-4">
+      <app-sidebar></app-sidebar>
+      <ul>
+        <li *ngFor="let monster of monsters">
+          {{ monster.displayName }}
+        </li>
+      </ul>
+    </div>
+    <div class="col-4">
+      2
+    </div>
+    <div class="col-4">
+      3
+    </div>
   </div>
-
-  <div>
-    <ul>
-      <li *ngFor="let monster of monsters">
-        {{ monster.displayName }}
-      </li>
-    </ul>
-  </div>
-
 </main>
 
 <router-outlet></router-outlet>
