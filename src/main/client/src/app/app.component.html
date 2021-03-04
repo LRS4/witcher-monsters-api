@@ -1,22 +1,26 @@
 <app-navbar></app-navbar>
 
-<main class="container">
-  <div class="row">
-    <div class="col-4">
-      <app-sidebar></app-sidebar>
-      <ul>
-        <li *ngFor="let monster of monsters">
-          {{ monster.displayName }}
-        </li>
-      </ul>
+<div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+
+  <main class="container">
+    <div class="row">
+      <div class="col-4">
+        <app-sidebar></app-sidebar>
+        <ul>
+          <li *ngFor="let monster of monsters">
+            {{ monster.displayName }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-4">
+        2
+      </div>
+      <div class="col-4">
+        3
+      </div>
     </div>
-    <div class="col-4">
-      2
-    </div>
-    <div class="col-4">
-      3
-    </div>
-  </div>
-</main>
+  </main>
+
+</div>
 
 <router-outlet></router-outlet>
