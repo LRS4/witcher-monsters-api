@@ -3,7 +3,7 @@
         <button type="button" 
             class="list-group-item list-group-item-action" 
             aria-current="true"
-            [ngClass]="{'active' : monster == selectedMonster}"
+            [ngClass]="{'active' : selectedMonster != null && monster == selectedMonster}"
             *ngFor="let monster of monsters"
             (click)="onSelect(monster)">
             <img src='{{ monster.imageUrl }}' />
