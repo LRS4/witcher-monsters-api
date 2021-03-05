@@ -7,12 +7,16 @@ import { AppComponent } from './app.component';
 import { MonsterService } from './services/monster.service';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { PortraitComponent } from './components/portrait/portrait.component';
+import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    SidebarComponent
+    SidebarComponent,
+    PortraitComponent,
+    JournalEntryComponent
   ],
   imports: [
     BrowserModule,
