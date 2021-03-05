@@ -1,4 +1,11 @@
-<p>journal-entry works!</p>
-<span *ngIf="selectedMonster != null">
-    {{ selectedMonster.displayName }}
-</span>
+<div *ngIf="selectedMonster != null" class="journal-entry-container">
+    <div class="journal-entry-text"> 
+        <h5>
+            {{ selectedMonster.displayName.toUpperCase() }}
+        </h5>
+        <hr />
+        <p>
+            {{ selectedMonster.entry }}
+        </p>
+    </div>
+</div>

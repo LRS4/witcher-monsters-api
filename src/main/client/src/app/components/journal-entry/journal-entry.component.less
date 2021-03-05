@@ -1,0 +1,40 @@
+@heading-text-color: rgb(145, 115, 63);
+@entry-paragraph-text-color: rgb(176, 163, 140);
+@scrollbar-color: rgb(94, 79, 50);
+
+h5 {
+    color: @heading-text-color;
+    font-weight: bold;
+}
+
+.journal-entry-container {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+.journal-entry-text {
+    margin-top: 10%;
+    color: @entry-paragraph-text-color;
+    font-weight: bold;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thick;
+    scrollbar-color: @scrollbar-color transparent;
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: @scrollbar-color;
+    border-radius: 20px;
+    border: 3px solid @scrollbar-color;
+}
