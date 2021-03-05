@@ -38,6 +38,7 @@ export class SidebarComponent implements OnInit {
 
   public onSelect(selectedMonster: Monster) {
     this.selectedMonster = selectedMonster;
+    this.dataService.changeSelectedMonster(selectedMonster);
   }
 
 }
