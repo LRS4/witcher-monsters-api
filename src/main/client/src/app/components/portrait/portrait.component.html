@@ -1,4 +1,4 @@
-<p>portrait works!</p>
-<span *ngIf="selectedMonster != null">
-    {{ selectedMonster.displayName }}
-</span>
+<img src='{{ selectedMonster.imageUrl }}' 
+    class="img-fluid" 
+    alt="The selected monster {{ selectedMonster.displayName }}"
+    *ngIf="selectedMonster != null">
