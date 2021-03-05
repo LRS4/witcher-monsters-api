@@ -13,6 +13,7 @@ export class SidebarComponent implements OnInit {
   
   public title = 'Monsters';
   public monsters: Monster[] = [];
+  public monstersByCategory: any[] = [];
   public selectedMonster: any;
 
   constructor(private monsterService: MonsterService,
@@ -29,6 +30,7 @@ export class SidebarComponent implements OnInit {
     this.monsterService.getMonsters().subscribe(
       (response: Monster[]) => {
         this.monsters = response;
+        this.monstersByCategory = this.groupMonstersByCategory(response);
       }
     ),
     (error: HttpErrorResponse) => {
@@ -36,7 +38,23 @@ export class SidebarComponent implements OnInit {
     }
   }
 
-  public onSelect(selectedMonster: Monster) {
+  public groupMonstersByCategory(monsters: any[]): any[] {
+    return monsters.reduce((monstersByCategory, monster) => {
+      const category = monster['category']['displayName'];
+      if (category in monstersByCategory) {
+        return {
+          ...monstersByCategory,
+          [category]: monstersByCategory[category].concat(monster)
+        }
+      }
+      return {
+        ...monstersByCategory, 
+        [category]: [monster]
+      }
+    }, {})
+  }
+
+  public onSelect(selectedMonster: Monster): void {
     this.selectedMonster = selectedMonster;
     this.dataService.changeSelectedMonster(selectedMonster);
   }
