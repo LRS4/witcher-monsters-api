@@ -1,11 +1,15 @@
-<div class="select-monster-list">
-    <ul>
-        <li *ngFor="let monster of monsters">
+<div class="monster-list-group">
+    <div class="list-group">
+        <button type="button" class="list-group-item list-group-item-action active">
+            <img src="https://res.cloudinary.com/dayqxxsip/image/upload/v1613822459/App%20Images/Witcher%203%20Bestiary/Cursed%20Ones/654_ycgfrc.png" />
+            Active monster
+        </button>
+        <button type="button" 
+            class="list-group-item list-group-item-action" 
+            aria-current="true"
+            *ngFor="let monster of monsters">
+            <img src='{{ monster.imageUrl }}' />
             {{ monster.displayName }}
-        </li>
-        <li *ngFor="let monster of monsters">
-            {{ monster.displayName }}
-        </li>
-    </ul>
+        </button>
+    </div>
 </div>
-
