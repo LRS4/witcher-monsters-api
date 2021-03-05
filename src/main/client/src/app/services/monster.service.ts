@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Monster } from './monster';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
+import { Monster } from '../models/monster';
 
 @Injectable({
   providedIn: 'root'

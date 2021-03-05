@@ -1,7 +1,7 @@
 import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
-import { Monster } from '../monster';
-import { MonsterService } from '../monster.service';
+import { Monster } from '../models/monster';
+import { MonsterService } from '../services/monster.service';
 
 @Component({
   selector: 'app-sidebar',
