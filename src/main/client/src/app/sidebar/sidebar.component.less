@@ -1,0 +1,25 @@
+.select-monster-list {
+    max-height: 80vh;
+    overflow: auto;
+}
+
+/* Works on Firefox */
+* {
+    scrollbar-width: thick;
+    scrollbar-color: rgb(94, 79, 50) transparent;
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(94, 79, 50);
+    border-radius: 20px;
+    border: 3px solid orange;
+}

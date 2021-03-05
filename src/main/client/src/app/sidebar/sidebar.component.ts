@@ -1,4 +1,7 @@
+import { HttpErrorResponse } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Monster } from '../monster';
+import { MonsterService } from '../monster.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -6,10 +9,25 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.less']
 })
 export class SidebarComponent implements OnInit {
+  
+  public title = 'Monsters';
+  public monsters: Monster[] = [];
 
-  constructor() { }
+  constructor(private monsterService: MonsterService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.getMonsters();
+  }
+
+  public getMonsters(): void {
+    this.monsterService.getMonsters().subscribe(
+      (response: Monster[]) => {
+        this.monsters = response;
+      }
+    ),
+    (error: HttpErrorResponse) => {
+      console.log(error.message);
+    }
   }
 
 }

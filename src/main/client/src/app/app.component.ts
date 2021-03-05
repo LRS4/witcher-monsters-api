@@ -9,23 +9,11 @@ import { MonsterService } from './monster.service';
   styleUrls: ['./app.component.less']
 })
 export class AppComponent implements OnInit {
+  
   public title = 'Monsters';
-  public monsters: Monster[] = [];
 
-  constructor(private monsterService: MonsterService) { }
+  constructor() { }
 
-  ngOnInit() {
-    this.getMonsters();
-  }
+  ngOnInit() { }
 
-  public getMonsters(): void {
-    this.monsterService.getMonsters().subscribe(
-      (response: Monster[]) => {
-        this.monsters = response;
-      }
-    ),
-    (error: HttpErrorResponse) => {
-      console.log(error.message);
-    }
-  }
 }
