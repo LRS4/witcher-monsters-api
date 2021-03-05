@@ -1,6 +1,6 @@
 @list-item-text-color: rgb(147, 101, 63);
 @list-item-text-color-active: rgb(183, 172, 139);
-@list-item-border-width: 2px;
+@list-item-border-width: 1px;
 @scrollbar-color: rgb(94, 79, 50);
 
 button {
@@ -13,6 +13,7 @@ button {
     border-width: @list-item-border-width;
     border-color: @list-item-text-color-active;
     color: @list-item-text-color-active;
+    background-image: linear-gradient(to right, rgb(45, 37, 31) , rgb(0, 0, 0, 1));
 }
 
 img {
@@ -32,6 +33,13 @@ img {
 }
 
 .list-group-item:hover {
+    border-style: solid;
+    border-width: @list-item-border-width;
+    border-color: @list-item-text-color-active;
+    color: @list-item-text-color-active;
+}
+
+.list-group-item:active {
     border-style: solid;
     border-width: @list-item-border-width;
     border-color: @list-item-text-color-active;
