@@ -63,8 +63,6 @@ export class SidebarComponent implements OnInit {
     } else {
       this.accordionCategoryIsOpen.push(categoryName);
     }
-
-    console.log(this.accordionCategoryIsOpen);
   }
 
   public onSelect(selectedMonster: Monster): void {
