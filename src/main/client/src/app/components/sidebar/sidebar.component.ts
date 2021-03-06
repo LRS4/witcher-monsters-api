@@ -31,12 +31,23 @@ export class SidebarComponent implements OnInit {
     this.monsterService.getMonsters().subscribe(
       (response: Monster[]) => {
         this.monsters = response;
-        this.monstersByCategory = this.groupMonstersByCategory(response);
+        let monstersByCategory = this.groupMonstersByCategory(response);
+        this.monstersByCategory = this.sortMonstersByCategoryAlphabetically(monstersByCategory);
       }
     ),
     (error: HttpErrorResponse) => {
       console.log(error.message);
     }
+  }
+
+  public sortMonstersByCategoryAlphabetically(monstersByCategory: any[]): any[] {
+    for (let category in monstersByCategory) {
+      monstersByCategory[category] = monstersByCategory[category].sort((a: any, b: any) => {
+        return a.displayName.localeCompare(b.displayName);
+      });
+    }
+
+    return monstersByCategory;
   }
 
   public groupMonstersByCategory(monsters: any[]): any[] {
