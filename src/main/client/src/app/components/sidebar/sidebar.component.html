@@ -1,6 +1,7 @@
 <div class="monster-list-group">
     <div *ngFor="let category of monstersByCategory | keyvalue">           
         <button class="accordion"
+            [ngClass]="{'accordion-active' : accordionCategoryIsOpen.includes(category.key)}"
             (click)="toggleCategoryActive(category.key)">
             {{category.key.toUpperCase()}}
         </button>
