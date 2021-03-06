@@ -9,18 +9,24 @@
             <div class="vulnerability-tooltip-section">
                 <h5 id="vulnerability-tooltip-header">{{ vulnerability.toUpperCase() }}</h5>
                 <h5 id="vulnerability-tooltip-description"
-                    *ngIf="vulnerabilitiesConstants[vulnerability.toUpperCase()] != undefined">
-                    {{ vulnerabilitiesConstants[vulnerability.toUpperCase()].type }}
-                </h5>
-                <h5 id="vulnerability-tooltip-description"
                     *ngIf="vulnerabilitiesConstants[vulnerability.toUpperCase()] == undefined">
                     UNKNOWN 
+                </h5>
+                <h5 id="vulnerability-tooltip-description"
+                    *ngIf="vulnerabilitiesConstants[vulnerability.toUpperCase()] != undefined">
+                    {{ vulnerabilitiesConstants[vulnerability.toUpperCase()].type }}
                 </h5>
             </div>
         </div>
 
         <img src="https://res.cloudinary.com/dayqxxsip/image/upload/v1615028388/App%20Images/Witcher%203%20Bestiary/Weaknesses/moon-dust.png" 
-            alt="" 
-            class="item-image">
+            alt="Unknown vulnerabilty using holding image" 
+            class="item-image"
+            *ngIf="vulnerabilitiesConstants[vulnerability.toUpperCase()] == undefined">
+
+        <img src="{{ vulnerabilitiesConstants[vulnerability.toUpperCase()].imageUrl }}" 
+            alt="The icon for {{ vulnerability }}" 
+            class="item-image"
+            *ngIf="vulnerabilitiesConstants[vulnerability.toUpperCase()] != undefined">
     </div>
 </div>
