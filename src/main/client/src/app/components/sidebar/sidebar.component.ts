@@ -13,8 +13,9 @@ export class SidebarComponent implements OnInit {
   
   public title = 'Monsters';
   public monsters: Monster[] = [];
-  public monstersByCategory: any[] = [];
   public selectedMonster: any;
+  public monstersByCategory: any[] = [];
+  public accordionCategoryIsOpen: string[] = [];
 
   constructor(private monsterService: MonsterService,
     private dataService: DataService) { }
@@ -52,6 +53,18 @@ export class SidebarComponent implements OnInit {
         [category]: [monster]
       }
     }, {})
+  }
+
+  public toggleCategoryActive(categoryName: string): void {
+    if (this.accordionCategoryIsOpen.includes(categoryName)) {
+      this.accordionCategoryIsOpen = [...this.accordionCategoryIsOpen].filter(item => {
+        return item !== categoryName;
+      });
+    } else {
+      this.accordionCategoryIsOpen.push(categoryName);
+    }
+
+    console.log(this.accordionCategoryIsOpen);
   }
 
   public onSelect(selectedMonster: Monster): void {

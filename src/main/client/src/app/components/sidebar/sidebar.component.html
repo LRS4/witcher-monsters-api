@@ -1,22 +1,21 @@
 <div class="monster-list-group">
-    <div class="list-group">
-        <button type="button" 
-            class="list-group-item list-group-item-action" 
-            aria-current="true"
-            [ngClass]="{'active' : selectedMonster != null && monster == selectedMonster}"
-            *ngFor="let monster of monsters"
-            (click)="onSelect(monster)">
-            <img src='{{ monster.imageUrl }}' />
-            {{ monster.displayName }}
+    <div *ngFor="let category of monstersByCategory | keyvalue">           
+        <button class="accordion"
+            (click)="toggleCategoryActive(category.key)">
+            {{category.key.toUpperCase()}}
         </button>
+        <div class="panel" *ngIf="accordionCategoryIsOpen.includes(category.key)">
+            <div class="list-group">
+                <button type="button" 
+                    class="list-group-item list-group-item-action" 
+                    aria-current="true"
+                    [ngClass]="{'active' : selectedMonster != null && monster == selectedMonster}"
+                    *ngFor="let monster of category.value"
+                    (click)="onSelect(monster)">
+                    <img src='{{ monster.imageUrl }}' />
+                    {{ monster.displayName }}
+                </button>
+            </div>
+        </div>
     </div>
 </div>
-
-<span *ngFor="let category of monstersByCategory | keyvalue">           
-    Category: {{category.key}}
-    <ul>
-        <li *ngFor="let monster of category.value">
-            {{ monster.displayName }}
-        </li>
-    </ul>
-</span>
