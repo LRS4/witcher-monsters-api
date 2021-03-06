@@ -1,0 +1,40 @@
+@heading-text-color: rgb(145, 115, 63);
+
+h5 {
+    color: @heading-text-color;
+}
+
+.item-image {
+    cursor: pointer;
+}
+
+/* Tooltip */
+
+.popover {
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px dotted black;
+  }
+  
+.popover .popover-card {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+  
+.popover:hover .popover-card {
+    visibility: visible;
+    text-align: left;
+}
