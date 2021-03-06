@@ -42,17 +42,12 @@ public class CursedOnesConfig {
             Monster berserkers = new Monster(
                     "berserkers",
                     "Berserkers",
-                    "Pussy cat, pussy cat, where have you been?\nI've been to Cintra to look at the queen\n" +
-                            "Pussy cat, pussy cat, what did you there?\n" +
-                            "Run, fool, that's not a cat but a panther!\n" +
-                            "– rare variant of a traditional folk rhyme\n\n" +
-                            "Panthers are dangerous predators found in forests and other woodlands. They are quick, agile and, like all cats, diabolically cunning. In many less-than-thoroughly-urbanized areas, folk still believe panthers are the stranded souls of those who die in their sleep. Superstition thus holds anyone perishing in this way should be dragged to the nearest woods and left there without a burial. The panther-spirit of the deceased may then devour its own body, thereby passing on to the nether realms.\n" +
-                            "This belief must be eradicated by any means, for it leads to epidemics of cholera and other contagious diseases born of rotting corpses.\n" +
-                            "Besides, it is patently ridiculous, given panthers are not necrophages and will not consume carrion of any sort. They prefer more spry and lively prey, such as deer or even humans, provided they are not ill and do not stink too badly.\n" +
-                            "Panthers (and their tawny-coated cousins, mountain lions) are incredibly swift and able to sneak up on prey undetected to gain the advantage of surprise.\n" +
-                            "As soon as they enter open terrain, they leap to attack with astonishing speed, mauling their prey with their sharp claws, long teeth and the sheer force of their momentum.\n" +
-                            "Panthers are known to retreat mid-fight, yet do not let yourself be fooled into a false sense of security. This is but a ruse to allow them to attack again, by surprise. Never drop your guard until you see the animal drop dead.\n\n" +
-                            "Panthers are vulnerable to the effects of all the Signs, as well as bombs and oils.",
+                    "Now finish your soup, or a berserker'll come and swallow ye whole.\n" +
+                            "– Skellige mother scolding a child.\n\n" +
+                            "Skellige legends speak of men known as berserkers who transform into bears when overwhelmed by battle rage. In doing so, they lose all self-awareness and are driven by a bloodlust which they must satiate in order to return to human form." +
+                            "Few believe these blood-curdling tales, however, not even in Skellige, where the inhabitants usually treat even the least probable legends with the utmost gravity. This indicates either that berserkers are in fact mere figments of mead-sodden imaginations, or else that they have learned to hide their abilities from the rest of the islanders.\n\n" +
+                            "The skalds' ballads indicate a berserker transformed in the heat of battle cannot be distinguised from a true-born bear. Only minute anatomical details - such as the shape of their tongues and teeth - reveal their secret. Descriptions of their fighting prowess paint them as invulnerable to pain and able to heal any wound received almost at once.\n\n" +
+                            "If these men-turned-bears truly do exist, one can suppose that, like werewolves and lycanthropes, they are particularly vulnerable to oils that harm cursed creatured. But if we are to give credence to ancient songs about these creatures' deeds, about the mass murders and massacres they have committed, we can only hope that no witcher will have to test this hypothesis.",
                     "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822469/App%20Images/Witcher%203%20Bestiary/Cursed%20Ones/654_xg97ff.png",
                     "Skellige,Vildkaarls' village",
                     "Devil's Puffball,Cursed oil,Quen,Igni",
@@ -95,7 +90,10 @@ public class CursedOnesConfig {
             Monster ulfhedinn = new Monster(
                     "ulfhedinn",
                     "Ulfhedinn",
-                    "",
+                    "Ulfhedinn? What's that, some kind of fish?\n" +
+                            "– Professor Artibus Joannes Rack, geographer, disappeared during a surveying expedition in Skellige\n\n" +
+                            "Ulfhedinn are a breed of werewolf found mainly in Skellige. The harsh and barren conditions of the isles might explain why they primarily hunt men and are stronger than their continental brethren. Older and particularly dangerous ulfhedinn are called vorefs. Only a few daring warriors in Skellige history have managed to defeat an ulfhedinn, and each of them is commemorated in ballads as a hero to this day.\n\n" +
+                            "Like werewolves, ulfhedinn and vorefs are active at night, particularly when the moon is at its fullest. Fast, strong, and amazingly resilient, these creatures kill with disturbing ease. Silver blades should be brought against them, as should Devil's Puffball. Take note that when near death the ulfhedinn becomes particularly dangerous and will attack with doubled fury, while calling on wolves to come to its rescue.",
                     "https://res.cloudinary.com/dayqxxsip/image/upload/v1613822530/App%20Images/Witcher%203%20Bestiary/Cursed%20Ones/654_xhxmsp.png",
                     "Skellige",
                     "Moon Dust,Devil's Puffball,Cursed oil,Igni",
