@@ -1,6 +1,7 @@
 @heading-text-color: rgb(145, 115, 63);
-@popover-heading-text-color: rgb(88, 84, 64);
-@popover-description-text-color: rgb(150, 148, 150);
+@tooltip-heading-text-color: rgb(88, 84, 64);
+@tooltip-description-text-color: rgb(150, 148, 150);
+@tooltip-text-padding-left: 8px;
 
 h5 {
     color: @heading-text-color;
@@ -8,21 +9,30 @@ h5 {
     font-family: 'PT Sans', sans-serif;
 }
 
+img {
+    position: relative;
+    z-index: 1;
+}
+
 .item-image {
+    position: relative;
+    z-index: 1;
     cursor: pointer;
 }
 
 /* Tooltip */
 
-#popover-header {
-    color: @popover-heading-text-color
+#vulnerability-tooltip-header {
+    color: @tooltip-heading-text-color;
+    padding-left: @tooltip-text-padding-left
 }
 
-#popover-description {
-    color: @popover-description-text-color;
+#vulnerability-tooltip-description {
+    color: @tooltip-description-text-color;
+    padding-left: @tooltip-text-padding-left;
 }
 
-.popover {
+.vulnerability-tooltip {
     position: relative;
     display: inline-block;
     color: white;
@@ -30,27 +40,23 @@ h5 {
     border-bottom: 1px dotted black;
   }
   
-.popover .popover-card {
+.vulnerability-tooltip .vulnerability-tooltip-card {
     visibility: hidden;
     width: 120px;
     background-color: black;
     color: #fff;
-    text-align: center;
+    text-align: left;
     border-radius: 6px;
     padding: 5px 0;
 
     /* Position the tooltip */
     position: absolute;
-    z-index: 1;
     top: -40px;
     left: 105%;
 }
   
-.popover:hover .popover-card {
+.vulnerability-tooltip:hover .vulnerability-tooltip-card {
     visibility: visible;
     text-align: left;
-}
-
-.popover-section {
-    padding-left: 5px;
+    z-index: 10000 !important;
 }
