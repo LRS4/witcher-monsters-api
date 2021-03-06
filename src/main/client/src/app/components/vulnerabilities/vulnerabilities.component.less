@@ -1,7 +1,11 @@
 @heading-text-color: rgb(145, 115, 63);
+@popover-heading-text-color: rgb(88, 84, 64);
+@popover-description-text-color: rgb(150, 148, 150);
 
 h5 {
     color: @heading-text-color;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
 }
 
 .item-image {
@@ -9,6 +13,14 @@ h5 {
 }
 
 /* Tooltip */
+
+#popover-header {
+    color: @popover-heading-text-color
+}
+
+#popover-description {
+    color: @popover-description-text-color;
+}
 
 .popover {
     position: relative;
@@ -30,11 +42,15 @@ h5 {
     /* Position the tooltip */
     position: absolute;
     z-index: 1;
-    top: -5px;
+    top: -40px;
     left: 105%;
 }
   
 .popover:hover .popover-card {
     visibility: visible;
     text-align: left;
+}
+
+.popover-section {
+    padding-left: 5px;
 }
