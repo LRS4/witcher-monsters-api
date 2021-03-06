@@ -11,3 +11,12 @@
         </button>
     </div>
 </div>
+
+<span *ngFor="let category of monstersByCategory | keyvalue">           
+    Category: {{category.key}}
+    <ul>
+        <li *ngFor="let monster of category.value">
+            {{ monster.displayName }}
+        </li>
+    </ul>
+</span>
