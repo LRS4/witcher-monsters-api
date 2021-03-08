@@ -1,0 +1,62 @@
+@heading-text-color: rgb(145, 115, 63);
+@tooltip-heading-text-color: rgb(88, 84, 64);
+@tooltip-description-text-color: rgb(150, 148, 150);
+@tooltip-text-padding-left: 8px;
+
+h5 {
+    color: @heading-text-color;
+    font-size: 15px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+img {
+    position: relative;
+    z-index: 1;
+}
+
+.item-image {
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+}
+
+/* Tooltip */
+
+#vulnerability-tooltip-header {
+    color: @tooltip-heading-text-color;
+    padding-left: @tooltip-text-padding-left
+}
+
+#vulnerability-tooltip-description {
+    color: @tooltip-description-text-color;
+    padding-left: @tooltip-text-padding-left;
+}
+
+.vulnerability-tooltip {
+    position: relative;
+    display: inline-block;
+    color: white;
+    background-color: transparent;
+    border-bottom: 1px dotted black;
+  }
+  
+.vulnerability-tooltip .vulnerability-tooltip-card {
+    visibility: hidden;
+    width: 140px;
+    background-color: black;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    top: -40px;
+    left: 105%;
+}
+  
+.vulnerability-tooltip:hover .vulnerability-tooltip-card {
+    visibility: visible;
+    text-align: left;
+    z-index: 10000 !important;
+}

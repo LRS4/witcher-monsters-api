@@ -20,7 +20,12 @@ public class MonstersApplication {
 	public CorsFilter corsFilter() {
 		CorsConfiguration corsConfiguration = new CorsConfiguration();
 		corsConfiguration.setAllowCredentials(true);
-		corsConfiguration.setAllowedOrigins(Arrays.asList("http://localhost:4200"));
+		corsConfiguration.setAllowedOrigins(
+				Arrays.asList(
+						"http://localhost:4200",
+						"http://monsters-env.eba-d73ppi3s.eu-west-1.elasticbeanstalk.com"
+				)
+		);
 		corsConfiguration.setAllowedHeaders(
 				Arrays.asList(
 						"Origin",

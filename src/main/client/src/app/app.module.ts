@@ -9,6 +9,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { PortraitComponent } from './components/portrait/portrait.component';
 import { JournalEntryComponent } from './components/journal-entry/journal-entry.component';
+import { VulnerabilitiesComponent } from './components/vulnerabilities/vulnerabilities.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { JournalEntryComponent } from './components/journal-entry/journal-entry.
     NavbarComponent,
     SidebarComponent,
     PortraitComponent,
-    JournalEntryComponent
+    JournalEntryComponent,
+    VulnerabilitiesComponent
   ],
   imports: [
     BrowserModule,

@@ -13,8 +13,9 @@ export class SidebarComponent implements OnInit {
   
   public title = 'Monsters';
   public monsters: Monster[] = [];
-  public monstersByCategory: any[] = [];
   public selectedMonster: any;
+  public monstersByCategory: any[] = [];
+  public accordionCategoryIsOpen: string[] = [];
 
   constructor(private monsterService: MonsterService,
     private dataService: DataService) { }
@@ -30,12 +31,23 @@ export class SidebarComponent implements OnInit {
     this.monsterService.getMonsters().subscribe(
       (response: Monster[]) => {
         this.monsters = response;
-        this.monstersByCategory = this.groupMonstersByCategory(response);
+        let monstersByCategory = this.groupMonstersByCategory(response);
+        this.monstersByCategory = this.sortMonstersByCategoryAlphabetically(monstersByCategory);
       }
     ),
     (error: HttpErrorResponse) => {
       console.log(error.message);
     }
+  }
+
+  public sortMonstersByCategoryAlphabetically(monstersByCategory: any[]): any[] {
+    for (let category in monstersByCategory) {
+      monstersByCategory[category] = monstersByCategory[category].sort((a: any, b: any) => {
+        return a.displayName.localeCompare(b.displayName);
+      });
+    }
+
+    return monstersByCategory;
   }
 
   public groupMonstersByCategory(monsters: any[]): any[] {
@@ -52,6 +64,16 @@ export class SidebarComponent implements OnInit {
         [category]: [monster]
       }
     }, {})
+  }
+
+  public toggleCategoryActive(categoryName: string): void {
+    if (this.accordionCategoryIsOpen.includes(categoryName)) {
+      this.accordionCategoryIsOpen = [...this.accordionCategoryIsOpen].filter(item => {
+        return item !== categoryName;
+      });
+    } else {
+      this.accordionCategoryIsOpen.push(categoryName);
+    }
   }
 
   public onSelect(selectedMonster: Monster): void {
