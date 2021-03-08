@@ -71,6 +71,7 @@
 					<workingDirectory>src/main/client</workingDirectory>
 					<arguments>
 						<argument>build</argument>
+						<argument>--prod</argument>
 					</arguments>
 				</configuration>
 			</plugin>
